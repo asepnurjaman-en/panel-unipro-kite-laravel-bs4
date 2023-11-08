@@ -1,0 +1,7954 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:		Uni Pro Admin Dashboard
+Version:		1.0
+Last change:	29/06/2021
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of Contents]
+
+1. Importing SCSS Variables
+2. Importing Web Fonts
+    2.1 Open Sans Font
+    2.2 Rubik Mono One Font
+3. Body CSS    
+4. Loading
+5. Re Usable Styles
+    5.1 Anchor Reset
+    5.2 Image Default Radius
+    5.3 Unorder List
+    5.4 Headings
+    5.5 Image Sizes
+    5.6 BG Colors
+    5.7 Text Colors
+    5.8 Custom Height
+    5.9 Icon Shadow
+6. Layout CSS 
+    6.1 Page Wrapper
+    6.2 Sidebar Wrapper
+    6.3 Sidebar Menu
+    6.4 Sidebar Actions
+    6.5 Sidebar Settings
+    6.6 Default Sidebar Wrapper
+        6.6.1 Default Sidebar Brand
+        6.6.2 Default Sidebar Menu
+    6.7 Slim Sidebar Menu
+    6.8 Compact Sidebar Menu
+        6.8.1 Compact Sidebar Brand
+        6.8.2 Compact Sidebar Menu
+    6.9 App Footer
+    6.10 Main Container
+        6.10.1 Page Wrapper
+        6.10.2 Default Sidebar Wrapper
+        6.10.3 Slim Sidebar Wrapper
+        6.10.4 Compact Sidebar Wrapper
+    6.11 Page Header
+    6.12 Search Container
+    6.13 Header Ations
+    6.14 Header Notifications
+    6.15 Header Activity
+    6.16 Header Profile Dropdown
+    6.17 Breadcrumb Container
+    6.18 Content Wrapper
+    6.19 Stats Tile
+    6.20 Stats Tile2
+    6.21 Stats Tile3
+    6.22 Stats Tile4
+    6.23 Stats Tile List
+    6.24 Image Stats Tiles
+    6.25 Earnings Detail
+    6.26 Top Users
+    6.27 Customer Rating
+    6.28 Custom File
+    6.29 Custom Form Fields
+    6.30 Checkbox Container
+    6.31 Form Actions Footer
+    6.32 Custom Button Group
+    6.33 Graph Day Selection
+    6.34 Stats
+    6.35 Weekly Earnings
+    6.36 Monthly Earnings
+    6.37 Earnings Badge
+    6.38 Report Stats
+    6.39 Top Rated Items
+    6.40 Cakes List
+    6.41 Sales Card
+    6.42 Followers Card
+    6.43 Tickets
+    6.44 Chat Widget
+    6.45 Todos
+    6.46 Statistics
+    6.47 Daily Goal
+    6.48 Payments Card
+    6.49 Graph Card
+    6.50 Product Cards
+    6.51 Ratings Block
+    6.52 Product Table
+    6.53 Create Offer
+    6.54 Social Stats
+    6.55 Recent Orders
+    6.56 Dashboard Header
+    6.57 Reports Summary
+    6.58 Profile Header
+    6.59 Consulting Header
+    6.60 Account Settings
+    6.61 Polls
+    6.62 Timeline Activity
+    6.63 Stacked Images
+    6.64 Gallery
+    6.65 Gallery Tiles
+    6.66 Icons Container
+    6.67 Chart Heights
+7. Authentication CSS
+    7.1 Login Screen
+    7.2 Login/Signup Screen Carousel
+    7.3 Error Screen #1
+    7.4 Error Screen #2 Animations
+    7.5 Login Screen 2
+    7.6 Subscribe Screen
+    7.7 Maintenance Screen
+8. Pages/Apps CSS
+    8.1 Documents App
+    8.2 Contacts App
+    8.3 Timeline App
+    8.4 Chat App
+    8.5 Tasks App
+    8.6 Labels Container
+    8.7 Tasks Container
+    8.8 Task List
+    8.9 Invoice Page
+    8.10 Pricing Plan
+    8.11 Search Results Page
+    8.12 FAQ Page
+9. Plugins
+    9.1 Slim Scroll Bar
+    9.2 DropZone
+    9.3 Credit Card
+    9.4 jVector Maps
+    9.5 Hover Tabs Dummy
+10. Bootstrap Overwrite CSS
+    10.1 Accordion
+    10.2 Cards
+    10.3 Alerts
+    10.4 Badges
+    10.5 Breadcrumbs
+    10.6 Buttons
+        10.6.1 Button Light
+        10.6.2 Button Outline Light
+        10.6.3 Button Dark
+        10.6.4 Button Outline Dark
+        10.6.5 Button Primary
+        10.6.6 Button Outline Primary
+        10.6.7 Button Secondary
+        10.6.8 Button Outline Secondary
+        10.6.9 Button Info
+        10.6.10 Button Outline Info
+        10.6.11 Button Danger
+        10.6.12 Button Outline Danger
+        10.6.13 Button Warning
+        10.6.14 Button Outline Warning
+        10.6.15 Button Success
+        10.6.16 Button Outline Success
+    10.7 Forms
+    10.7.1 Controls
+    10.7.2 Validations
+    10.7.3 File Upload
+    10.7.4 Checkbox and Radio
+    10.8 List Group
+    10.9 Modal
+    10.10 Dropdown Menu
+    10.11 Nav Tabs
+    10.12 Tooltips
+    10.13 Popovers
+    10.14 Tables
+    10.15 Pagination
+    10.16 Progress
+    10.17 Row Gutters
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Typography]
+
+# Open Sans - Main Font
+# Rubik Mono One Font - Additional Font
+-------------------------------------------------------------------*/
+
+
+
+/************************************************
+	************************************************
+				1. Importing SCSS Variables
+	************************************************
+************************************************/
+@import 'variables.scss';
+
+
+
+/************************************************
+	************************************************
+				2. Importing Web Fonts
+	************************************************
+************************************************/
+
+/******** 2.1 Open Sans Font ********/
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/******** 2.2 Rubik Mono One Font ********/
+@font-face {
+    font-family: 'Rubik Mono One';
+    src: url('../fonts/rubik-mono/RubikMonoOne-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+
+/************************************************
+	************************************************
+					3. Body CSS
+	************************************************
+************************************************/
+html, body {
+	height: 100%;
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 400 .8rem 'Open Sans', sans-serif;
+	color: $main-font-color;
+	min-height: 100%;
+	position: relative;
+	&.authentication {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: url(../img/login-bg.jpg) no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		overflow: auto;
+	}
+	&.error-page {
+		background: $red;
+	}
+	&.subscribe-page {
+		background: $dark-bg;
+		display: flex;
+	}
+	&.maintenance-page {
+		background: $primary-color-dark;
+		display: flex;
+		align-items: center;
+	}
+	&.fullscreen {
+		.page-header {
+			.toggle-sidebar {
+				display: flex;
+				margin: 0 10px 0 -8px;
+			}
+		}
+		.page-wrapper {
+			.main-container {
+				padding-left: 0;
+			}
+			.sidebar-wrapper {
+				left: -350px;
+				.sidebar-tabs {
+					.nav {
+						a.logo {
+							margin: 3.5rem auto 2.5rem auto;
+						}
+					}
+				}
+			}
+			&.toggled {
+				.sidebar-wrapper {
+					left: 10px;
+				}
+			}
+		}
+	}
+	&.full-view {
+		.page-wrapper {
+			padding: 0;
+		}
+		.sidebar-wrapper {
+			height: calc(100vh);
+			top: 0;
+			left: 0;
+			.sidebar-tabs {
+				height: calc(100vh);
+				.nav {
+					@include roundedCorners(0);
+					height: calc(100vh);
+				}
+			}
+		}
+		.main-container {
+			@include roundedCorners(0);
+			height: calc(100vh);
+		}
+		.content-wrapper {
+			height: calc(100vh - 135px);
+		}
+		.sidebar-actions {
+			margin: 4.5rem 0 1rem 0;
+		}
+		@media screen and (max-width: 1024px) {
+			.page-wrapper {
+				.sidebar-wrapper {
+					left: -350px;
+				}
+				&.toggled {
+					.sidebar-wrapper {
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+	&.default-sidebar {
+		.main-container {
+			padding: 0 0 0 260px;
+		}
+	}
+	&.compact-sidebar {
+		.main-container {
+			padding: 0 0 0 160px;
+		}
+	}
+	&.slim-sidebar {
+		.main-container {
+			padding: 0 0 0 75px;
+		}
+	}
+}
+
+
+/************************************************
+	************************************************
+					4. Loading
+	************************************************
+************************************************/
+#loading-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5000;
+	background: rgba(0, 0, 0, 0.95);
+	color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 1rem;
+	.spinner-border {
+		width: 5rem;
+		height: 5rem;
+		color: $primary-color;
+		border-width: .7em;
+		margin-bottom: 10px;
+	}
+}
+
+
+/************************************************
+	************************************************
+				5. Re Usable Styles
+	************************************************
+************************************************/
+
+/******** 5.1 Anchor Reset ********/
+a {
+	color: $black;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+
+/******** 5.2 Image Default Radius ********/
+img {
+	@include roundedCorners(3);
+}
+
+
+/******** 5.3 Unorder List ********/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	&.custom {
+		font-size: .825rem;
+		margin: 20px 0 0 20px;
+		li {
+			line-height: 180%;
+		}
+	}
+}
+
+
+/******** 5.4 Headings ********/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: .8rem;
+}
+h2 {
+	font-size: 2rem;
+	margin-bottom: .5rem;
+}
+h3 {
+	font-size: 1.5rem;
+	margin-bottom: .5rem;
+}
+h4 {
+	font-size: 1.25rem;
+	margin-bottom: .4rem;
+}
+h5 {
+	font-size: 1rem;
+	margin-bottom: .3rem;
+}
+h6 {
+	font-size: .85rem;
+	margin-bottom: .2rem;
+}
+p {
+	margin-bottom: .2rem;
+	line-height: 180%;
+}
+
+
+/******** 5.5 Image Sizes ********/
+.img-36 {
+	width: 36px;
+	height: 36px;
+}
+.img-48 {
+	width: 48px;
+	height: 48px;
+}
+.img-64 {
+	width: 64px;
+	height: 64px;
+}
+.img-72 {
+	width: 72px;
+	height: 72px;
+}
+.img-90 {
+	width: 90px;
+	height: 90px;
+}
+
+
+/******** 5.6 BG Colors ********/
+.bg-primary {
+	background: $primary-color !important;
+}
+.bg-secondary {
+	background: $secondary-color !important;
+}
+.red-bg, .bg-danger {
+	background: $red !important;
+}
+.green-bg , .bg-success{
+	background: $green !important;
+}
+.yellow-bg, .bg-warning {
+	background: $yellow !important;
+}
+.blue-bg, .bg-info {
+	background: $blue !important;
+}
+.light-bg, .bg-light {
+	background: $light-color !important;
+	color: $font-color;
+}
+
+
+/******** 5.7 Text Colors ********/
+.text-primary {
+	color: $primary-color !important;
+}
+.text-secondary {
+	color: $secondary-color !important;
+}
+.text-danger {
+	color: $red !important;
+}
+.text-success {
+	color: $green !important;
+}
+.text-warning {
+	color: $yellow !important;
+}
+.text-info {
+	color: $blue !important;
+}
+.text-light {
+	color: $font-color-light !important;
+}
+.text-lighter {
+	color: $font-color-lighter !important;
+}
+
+
+/******** 5.8 Custom Height ********/
+.h-320 {
+	min-height: 320px;
+}
+.h-350 {
+	min-height: 350px;
+}
+.h-380 {
+	min-height: 380px;
+}
+.h-410 {
+	min-height: 410px;
+}
+.h-475 {
+	min-height: 475px;
+}
+.h-250 {
+	min-height: 250px;
+}
+.h-180 {
+	min-height: 180px;
+}
+
+
+/******** 5.9 Icon Shadow ********/
+[class^="icon-"], [class*=" icon-"] {
+	text-shadow: 1px 1px $white;
+}
+
+
+/************************************************
+	************************************************
+					6. Layout CSS
+	************************************************
+************************************************/
+
+/******** 6.1 Page Wrapper ********/
+.page-wrapper {
+	padding: 10px;
+	background: $primary-color-dark;
+}
+
+
+/******** 6.2 Sidebar Wrapper ********/
+.sidebar-wrapper {
+	height: calc(100vh - 20px);
+	position: fixed;	
+	top: 10px;
+	left: 10px;
+	z-index: 999;
+	-webkit-transition: left .3s ease, width .3s ease;
+	transition: left .3s ease, width .3s ease;	
+
+	// Sidebar content
+	.sidebar-tabs {
+		display: flex;
+		flex-direction: row;
+		height: calc(100vh - 20px);		
+		.nav {
+			flex-direction: column;
+			align-items: center;
+			width: 70px;
+			padding: 1rem 0.5rem 1rem 0.5rem;
+			@include roundedCornersAll(10px, 0, 0, 10px);
+			background: $sidebar-bg;
+			height: calc(100vh - 20px);
+			a.logo {
+				margin: .5rem auto 2.5rem auto;
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+			a.nav-link {
+				padding: 16px;
+				display: flex;
+				position: relative;
+				@include roundedCorners(50);
+				min-width: 52px;
+				min-height: 52px;
+				i {
+					font-size: 1.2rem;
+					color: $sidebar-text-color;
+				}
+				&:hover {
+					background: $sidebar-hover-bg;
+					@include roundedCorners(50);
+					.nav-link-text {
+						display: block;
+					}
+				}
+				&.active {
+					background: $sidebar-active-bg;					
+					i {
+						color: $primary-color;
+					}
+				}
+				.nav-link-text {
+					padding: 3px 12px;
+					background: $nav-tooltip-bg;
+					color: $nav-tooltip-text;
+					display: none;
+					position: absolute;
+					left: 60px;
+					font-size: .7rem;
+					top: 17px;
+					z-index: 100;
+					@include roundedCorners(2);
+					&:before {
+						content: '';
+						position: absolute;
+						left: -5px;
+						top: 6px;
+						width: 0;
+						height: 0;
+						border-top: 5px solid transparent;
+						border-bottom: 5px solid transparent;
+						border-right: 5px solid $nav-tooltip-bg;
+					}
+				}
+				&.settings {
+					margin-top: auto;
+					background: $sidebar-hover-bg;
+					@include roundedCorners(50);
+					position: relative;
+				}
+			}
+		}
+		.tab-content {
+			width: 240px;
+			padding: 0;
+			background: $tab-content-bg;
+			> .tab-pane {
+				.tab-pane-header {
+					margin: 0;
+					padding: 1.5rem 20px;
+					font-size: 1.2rem;
+					font-weight: 600;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 420px) {
+	.sidebar-wrapper {
+		// Sidebar content
+		.sidebar-tabs {
+			.nav {
+				a.nav-link {
+					padding: 10px;
+					min-width: 36px;
+					min-height: 36px;
+					i {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/******** 6.3 Sidebar Menu ********/
+.sidebar-menu {
+	padding: 0;	
+	.list-heading {
+		padding: 0 20px 10px 20px;
+		color: $font-color;
+		font-size: .75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	ul {
+		margin: 0 0 15px 0;
+		li {
+			a {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				position: relative;
+				min-height: 36px;
+				padding: 10px 20px 10px 20px;
+				color: $font-color-light;
+				font-size: .825rem;
+				-webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-ms-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+				position: relative;
+				&:hover {
+					color: $primary-color;
+					background: rgba(255, 255, 255, 0.5);
+				}
+				&.current-page {
+					color: $primary-color;
+					background: $white;
+					box-shadow: inset 3px 0 0 $primary-color;
+					position: relative;
+				}
+			}
+		}
+	}
+	ul.tile-menu {
+		margin: 0 15px 15px 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		li {
+			width: 48%;
+			background: $white;
+			@include roundedCorners(5);
+			padding: 0;
+			border: 1px solid $border-bg;
+			margin: 4px 0;
+			a {
+				justify-content: center;
+				flex-direction: column;
+				padding: 9px 5px;
+				min-height: 80px;
+				font-size: .725rem;
+				i {
+					font-size: 1.1rem;
+					color: $sidebar-text-color;
+					margin-bottom: .5rem;
+					display: flex;
+				}
+				&:hover {
+					color: $primary-color;
+					i {
+						color: $primary-color;
+					}
+				}
+				&.current-page {
+					color: $primary-color;
+					i {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+		.list-heading {
+			width: 100%;
+			padding: 0 0 10px 0;
+			background: transparent;
+			border: 0;
+		}
+	}
+}
+
+
+/******** 6.4 Sidebar Actions ********/
+.sidebar-actions {
+	margin: 2.5rem 0 1rem 0;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	> a {
+		padding: 10px;
+		@include roundedCorners(4);
+		min-width: 90px;
+		max-width: 90px;
+		min-height: 80px;
+		margin-right: 10px;
+		display: flex;
+		flex-direction: column;
+		background: $white;
+		box-shadow: 5px 5px 10px $card-shadow;
+		.bg-avatar {
+			width: 40px;
+			height: 40px;
+			@include roundedCorners(50);
+			margin: -30px 0 15px 0;
+			font-size: 13px;
+			font-weight: 700;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		> h5 {
+			font-size: .8rem;
+			margin: 0 10px 10px 0;
+			font-weight: 400;
+			color: $font-color-light;
+		}
+		&:hover {
+			background: $blue;
+			color: $white;
+			> h5 {
+				color: $white;
+			}
+			> h6 {
+				color: $white;
+			}
+		}
+		&.red {
+			.bg-avatar {
+				background: $light-red;
+				color: $dark-red;
+			}
+			&:hover {
+				background: $red;
+				color: $white;
+			}
+		}
+		&.blue {
+			.bg-avatar {
+				background: $light-blue;
+				color: $dark-blue;
+			}
+			&:hover {
+				background: $blue;
+				color: $white;
+			}
+		}
+	}
+	.support-tile {
+		background: $primary-color;
+		color: $white;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 15px 10px;
+		@include roundedCorners(4);
+		font-size: .9rem;
+		line-height: 130%;
+		font-weight: 600;
+		background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.1) 50%,rgba(255,255,255,.1) 75%,transparent 75%,transparent) !important;
+		background-size: .4rem .4rem !important;
+		i {
+			background: $white;
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include roundedCorners(50);
+			text-shadow: none;
+			color: $primary-color;
+			font-size: 1.4rem;
+			margin-right: 10px;
+		}
+		&.green {
+			background: $green;
+			i {
+				color: $green;
+			}
+		}
+		&.red {
+			background: $red;
+			i {
+				color: $red;
+			}
+		}
+		&.yellow {
+			background: $dark-yellow;
+			i {
+				color: $dark-yellow;
+			}
+		}
+		&.pink {
+			background: $pink;
+			i {
+				color: $pink;
+			}
+		}
+		.btn {
+			display: block;
+			color: $grey;
+		}
+		a {
+			color: $white;;
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.sidebar-actions {
+		> a {
+			padding: 10px;
+			min-width: 80px;
+			max-width: 80px;
+		}
+	}
+}
+
+
+/******** 6.5 Sidebar Settings ********/
+.sidebar-settings {
+	padding: 0 20px;
+	.accordion {
+		.accordion-button {
+			font-size: .775rem;
+			color: $font-color-light;
+			padding: .8rem .8rem;
+			&::after {
+				width: 1rem;
+				height: 1rem;
+				background-size: 1rem;
+			}
+		}
+		.accordion-body {
+			padding: .6rem .8rem;
+		}
+	}	
+	.noti-container {
+		margin: 0 -.8rem;
+		.noti-block {
+			font-size: .775rem;
+			color: $font-color-light;
+			padding: .6rem .8rem;
+			border-bottom: 1px solid $border-bg;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+	.form-switch {
+		padding: 0;
+		.form-check-input {
+			margin-left: auto;
+		}
+	}
+	.field-wrapper{
+		input {
+			min-height: 30px;
+		}
+		.field-placeholder {
+			font-size: .7rem;
+		}
+	}
+}
+
+
+/******** 6.6 Default Sidebar Wrapper ********/
+.default-sidebar-wrapper {
+	width: 260px;
+	padding: 0;
+	background: $tab-content-bg;
+	height: calc(100vh - 20px);
+	@include roundedCornersAll(4px, 0, 0, 4px);
+
+	/******** 6.6.1 Default Sidebar Brand ********/
+	.default-sidebar-brand {
+		margin: 0;
+		.logo {
+			padding: 1rem;
+			min-height: 80px;
+			margin: 0 0 1rem 0;
+			display: flex;
+			img {
+				max-width: 150px;
+				max-height: 48px;
+			}
+		}
+	}
+
+	/******** 6.6.2 Default Sidebar Menu ********/
+	.default-sidebar-menu {
+		padding-bottom: 10px;
+		ul {
+			li {
+				a {
+					display: flex;
+					align-items: center;
+					position: relative;
+					padding: 7px 35px 7px 20px;
+					width: 100%;
+					color: $sidebar-text-color;
+					font-size: .8rem;
+					i {
+						margin-right: 12px;
+						font-size: 1rem;
+						background-color: $sidebar-icon-bg;
+						text-shadow: none;
+						color: $primary-color;
+						width: 36px;
+						height: 36px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						-ms-flex-negative: 0;
+						flex-shrink: 0;
+						@include roundedCorners(4);
+					}
+					.menu-text {
+						-webkit-box-flex: 1;
+						-ms-flex-positive: 1;
+						flex-grow: 1;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						-ms-flex-negative: 1;
+						flex-shrink: 1;
+						overflow: hidden;
+					}
+					&:hover {
+						color: $primary-color;
+						i {
+							background-color: $primary-color;
+							color: $white;
+						}
+					}
+				}
+				&.active-page-link {
+					background: $primary-color;
+					position: relative;
+					pointer-events: none;
+					a {
+						color: $white;
+						i {
+							background: $sidebar-active-bg;
+							color: $white;
+							@include roundedCorners(4);
+						}
+					}
+				}
+				&.active {
+					a {
+						i {
+							background: $primary-color;
+							color: $white;
+							@include roundedCorners(4);
+						}
+						&.current-page {
+							background: $primary-color;
+							pointer-events: none;
+							position: relative;
+							color: $white;
+							&:after {
+								content: '';
+								position: absolute;
+								width: 0;
+								height: 0;
+								top: 50%;
+								right: 0px;
+								margin: -8px 0 0 0;
+								border: 8px solid;
+								border-color: transparent $content-wrapper-bg transparent transparent;
+							}
+						}
+					}
+					.default-sidebar-submenu {
+						display: block;
+					}
+				}
+			}
+		}
+		.default-sidebar-dropdown {
+			> a:after {
+				font-family: "icomoon";
+				font-weight: 700;
+				font-size: 1rem;
+				content: "\e9ef";
+				display: inline-block;
+				position: absolute;
+				right: 15px;
+				top: 18px;
+				-webkit-transition: -webkit-transform .3s ease;
+				transition: -webkit-transform .3s ease;
+				transition: transform .3s ease;
+				transition: transform .3s ease, -webkit-transform .3s ease;
+			}
+			.default-sidebar-submenu {
+				display: none;
+				ul {
+					padding: 0;
+					li {
+						a {
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							padding: 9px 35px 9px 65px;
+							font-size: .8rem;
+							&:before {
+								font-family: "icomoon";
+								font-weight: 700;
+								content: "\e5c8";
+								margin: 0 10px 0 0;
+								font-size: .7rem;
+							}
+							&:hover {
+								background: $sidebar-hover-bg;
+							}
+						}
+					}
+				}
+			}
+			&.active > a:after {
+				-webkit-transform: rotate(-180deg);
+				transform: rotate(-180deg);
+				right: 15px;
+			}
+		}
+	}
+}
+
+/******** 6.7 Slim Sidebar Menu ********/
+@media screen and (min-width: 1025px) {
+	.slim-sidebar .default-sidebar-wrapper {
+		-webkit-transition: left .3s ease, width .3s ease;
+		transition: left .3s ease, width .3s ease;
+	}
+	.slim-sidebar:not(.sidebar-hovered) .default-sidebar-wrapper {
+		width: 75px;
+		-webkit-transition: left .3s ease, width .3s ease;
+		transition: left .3s ease, width .3s ease;
+	}
+	.slim-sidebar:not(.sidebar-hovered) .default-sidebar-wrapper .default-sidebar-menu .default-sidebar-submenu,
+	.slim-sidebar:not(.sidebar-hovered) .default-sidebar-wrapper .default-sidebar-menu ul > li > a > span,
+	.slim-sidebar:not(.sidebar-hovered) .default-sidebar-wrapper .default-sidebar-menu ul > li > a::after {
+	  	display: none !important;
+	}
+}
+
+
+/******** 6.8 Compact Sidebar Menu ********/
+.compact-sidebar-wrapper {
+	width: 160px;
+	padding: 0;
+	background: $tab-content-bg;
+	height: calc(100vh - 20px);
+	@include roundedCornersAll(4px, 0, 0, 4px);
+
+	/******** 6.8.1 Compact Sidebar Brand ********/
+	.compact-sidebar-brand {
+		margin: 0;
+		.logo {
+			padding: 1rem;
+			min-height: 80px;
+			margin: 0 0 1rem 0;
+			display: flex;
+			img {
+				max-width: 130px;
+				max-height: 40px;
+			}
+		}
+	}
+
+	/******** 6.8.2 Compact Sidebar Menu ********/
+	.compact-sidebar-menu {
+		padding-bottom: 10px;
+		ul {
+			li {
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					position: relative;
+					padding: 15px 15px 15px 15px;
+					width: 100%;
+					color: $sidebar-text-color;
+					font-size: .725rem;
+					i {
+						margin-bottom: 7px;
+						font-size: 1rem;
+						background-color: $sidebar-icon-bg;
+						text-shadow: none;
+						color: $primary-color;
+						width: 36px;
+						height: 36px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						-ms-flex-negative: 0;
+						flex-shrink: 0;
+						@include roundedCorners(4);
+					}
+					.menu-text {
+						-webkit-box-flex: 1;
+						-ms-flex-positive: 1;
+						flex-grow: 1;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						-ms-flex-negative: 1;
+						flex-shrink: 1;
+						overflow: hidden;
+					}
+					&:hover {
+						color: $primary-color;
+						i {
+							background-color: $primary-color;
+							color: $white;
+						}
+					}
+				}
+				&.active-page-link {
+					background: $primary-color;
+					position: relative;
+					pointer-events: none;
+					a {
+						color: $white;
+						i {
+							background: $sidebar-active-bg;
+							color: $white;
+							@include roundedCorners(4);
+						}
+					}
+				}
+				&.active {
+					a {
+						i {
+							background: $primary-color;
+							color: $white;
+							@include roundedCorners(4);
+						}
+						&.current-page {
+							background: $primary-color;
+							pointer-events: none;
+							position: relative;
+							color: $white;
+							&:after {
+								content: '';
+								position: absolute;
+								width: 0;
+								height: 0;
+								top: 50%;
+								right: 0px;
+								margin: -8px 0 0 0;
+								border: 8px solid;
+								border-color: transparent $content-wrapper-bg transparent transparent;
+							}
+						}
+					}
+					.compact-sidebar-submenu {
+						display: block;
+					}
+				}
+			}
+		}
+		.compact-sidebar-dropdown {
+			> a:after {
+				font-family: "icomoon";
+				font-weight: 700;
+				font-size: 1rem;
+				content: "\e9ef";
+				display: inline-block;
+				position: absolute;
+				right: 40px;
+				top: 25px;
+				-webkit-transition: -webkit-transform .3s ease;
+				transition: -webkit-transform .3s ease;
+				transition: transform .3s ease;
+				transition: transform .3s ease, -webkit-transform .3s ease;
+			}
+			.compact-sidebar-submenu {
+				display: none;
+				ul {
+					padding: 0;
+					li {
+						a {
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							padding: 7px 15px 7px 15px;
+							font-size: .725rem;
+							&:hover {
+								background: $sidebar-hover-bg;
+							}
+						}
+					}
+				}
+			}
+			&.active > a:after {
+				-webkit-transform: rotate(-180deg);
+				transform: rotate(-180deg);
+				right: 40px;
+			}
+		}
+	}
+}
+
+
+/******** 6.9 App Footer ********/
+.app-footer {
+	font-size: .65rem;
+	color: rgba(0, 0, 0, 0.5);
+	margin: 0;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+}
+@media (max-width: 576px) {
+	.app-footer {
+		padding: 1rem 1rem 1rem 1rem;
+	}
+}
+
+
+/******** 6.10 Main Container ********/
+.main-container {
+	background: $content-wrapper-bg;
+	@include roundedCorners(10);
+	-webkit-transition: padding-left .3s ease;
+	transition: padding-left .3s ease;
+	padding: 0 0 0 310px;
+	height: calc(100vh - 20px);
+}
+@media screen and (max-width: 1024px) {
+
+	/******** 6.10.1 Page Wrapper ********/
+	.page-wrapper {
+		.sidebar-wrapper {
+			left: -350px;
+		}
+		&.toggled {
+			.sidebar-wrapper {
+				left: 10px;
+			}
+		}
+		// Sidebar wrapper *************************
+		.sidebar-wrapper {
+			.sidebar-tabs {
+				.nav {
+					a.logo {
+						margin: 3.5rem auto 1.5rem auto;
+						img {
+							width: 32px;
+							height: 32px;
+						}
+					}
+				}
+				.tab-content {
+					width: 220px;
+				}
+			}
+		}
+		// Main container *************************
+		.main-container {
+			padding-left: 0px;
+		}
+	}
+
+	/******** 6.10.2 Default Sidebar Wrapper ********/
+	body.default-sidebar {
+		.page-wrapper {
+			.sidebar-wrapper {
+				left: -280px;
+			}
+			&.toggled {
+				.sidebar-wrapper {
+					left: 10px;
+				}
+			}
+
+			// Main container *************************
+			.main-container {
+				padding-left: 0px;
+			}
+			.default-sidebar-wrapper {
+			
+				// Default sidebar brand
+				.default-sidebar-brand {
+					.logo {
+						margin: 0 0 1rem 3.5rem;
+						img {
+							max-height: 34px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/******** 6.10.3 Slim Sidebar Wrapper ********/
+	body.slim-sidebar {
+		.page-wrapper {
+			.sidebar-wrapper {
+				left: -280px;
+			}
+			&.toggled {
+				.sidebar-wrapper {
+					left: 10px;
+				}
+			}
+
+			// Main container *************************
+			.main-container {
+				padding-left: 0px;
+			}
+			.default-sidebar-wrapper {
+			
+				// Slim sidebar brand
+				.default-sidebar-brand {
+					.logo {
+						margin: 0 0 1rem 3.5rem;
+						min-height: 60px;
+						img {
+							max-height: 34px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/******** 6.10.4 Compact Sidebar Wrapper ********/
+	body.compact-sidebar {
+		.page-wrapper {
+			.sidebar-wrapper {
+				left: -160px;
+			}
+			&.toggled {
+				.sidebar-wrapper {
+					left: 10px;
+				}
+			}
+
+			// Main container *************************
+			.main-container {
+				padding-left: 0px;
+			}
+			.compact-sidebar-wrapper {
+			
+				// Default sidebar brand
+				.compact-sidebar-brand {
+					.logo {
+						margin: 0 0 1rem 3.5rem;
+						min-height: 70px;
+						img {
+							max-height: 30px;
+							margin: 5px 0 0 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+/******** 6.11 Page Header ********/
+.page-header {
+	padding: 0 1.5rem;
+	margin: 0 0 20px 0;
+	border-bottom: 1px solid darken($content-wrapper-bg, 5%);
+	.toggle-sidebar {
+		border: 2px solid $primary-color;
+		background: $pearl-bg;
+		@include roundedCorners(30);
+		box-shadow: inset -1px -1px 0px $white;
+		cursor: pointer;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+    	min-width: 40px;
+    	height: 40px;
+		margin: 0 15px 0 -4px;
+		z-index: 1000;
+		i {
+			color: $primary-color;
+			font-size: 1.1rem;
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.page-header {
+		.toggle-sidebar {
+			display: flex;
+			margin: 0 15px 0 0;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.page-header {
+		padding: 0 1rem;
+	}
+}
+
+
+/******** 6.12 Search Container ********/
+.search-container {
+	margin: 13px 0 13px 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	a.logo {
+		margin: 0 15px 0 0;
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.ui.search {
+		position: relative;
+		.search.icon {
+			color: $primary-color;
+			opacity: 1;
+			position: absolute;
+			top: 8px;
+			right: 10px;
+			font-size: 1.5rem;
+		}
+	}
+	.prompt {
+		border: 0;
+		@include roundedCorners(4);
+		background: $white;
+		height: 40px;
+		padding: .375rem 0 .375rem 3rem;			
+		&:focus, &:hover {
+			border: 0;
+			border-color: $primary-color;
+			box-shadow: none;
+			outline: auto !important;
+			outline-color: $primary-color !important;
+			@include transition(all, 0.5s, ease-in-out);
+		}
+	}
+}
+
+
+/******** 6.13 Header Ations ********/
+.header-actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	> li {
+		> a {
+			padding: 1.5rem 1.3rem;
+			display: flex;
+			position: relative;
+			align-items: center;
+			justify-content: center;
+			> i {
+				font-size: 1.2rem;
+				color: $primary-color;
+			}
+			.count-label {
+				position: absolute;
+				top: 8px;
+				right: 5px;
+				width: 16px;
+				height: 16px;
+				line-height: 16px;
+				font-size: .6rem;
+				font-weight: 600;
+				text-align: center;
+				background: $primary-color;
+				color: $white;
+				@include roundedCorners(30);
+			}
+			&.user-settings {
+				padding: .85rem 1rem .85rem 1rem;
+				color: $font-color;
+				.avatar {
+					position: relative;
+					margin: 0;
+					width: 40px;
+					height: 40px;
+					> img {
+						width: 40px;
+						height: 40px;
+						@include roundedCorners(50);
+					}
+					.status {
+						position: absolute;
+						top: -3px;
+						right: -4px;
+						width: 13px;
+						height: 15px;
+						@include roundedCorners(10);
+						border: 2px solid $white;
+						&.busy {
+							background: $red;
+						}
+						&.online {
+							background: $green;
+						}
+						&.away {
+							background: $yellow;
+						}
+					}
+				}
+				span.user-name {
+					margin-right: 8px;
+					vertical-align: middle;
+					font-size: .825rem;
+					display: inline-block;
+					max-width: 90px;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+		&:hover, &:focus {
+			> a {
+				background: $white;
+				i {
+					color: $primary-color;
+				}
+			}
+			.dropdown-menu {
+				margin-top: 0;
+				display: block;
+			}
+		}
+	}
+}
+@media (max-width: 576px) {
+	.header-actions {
+		> li {
+			> a {
+				&.user-settings {
+					span.user-name {
+						display: none;
+					}
+				}
+			}
+			&:nth-child(2n) {
+				display: none;
+			}
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+}
+
+
+/******** 6.14 Header Notifications ********/
+ul.header-notifications {
+	li {		
+		a {
+			padding: .7rem 1rem;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			> .user-img {
+				position: relative;
+				margin: 0 10px 0 0;
+				img {
+					width: 40px;
+					height: 40px;
+					@include roundedCorners(50);
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					right: -3px;
+					bottom: 5px;
+					width: 10px;
+					height: 10px;
+					border: 1px solid $white;
+					background: $primary-color;
+					@include roundedCorners(50);
+				}
+				&.online {
+					&:after {
+						background: $green;
+					}
+				}
+				&.busy {
+					&:after {
+						background: $red;
+					}
+				}
+				&.away {
+					&:after {
+						background: $yellow;
+					}
+				}
+			}
+			.details {
+				display: flex;
+				flex-direction: column;
+				> .user-title {
+					font-weight: 600;
+					font-size: .825rem;
+					margin: 0 0 2px 0;
+					color: $font-color;
+				}
+				.noti-details {
+					font-size: .75rem;
+					line-height: 150%;
+					color: $font-color-light;
+				}
+				.noti-date {
+					opacity: 0.4;
+					line-height: 150%;
+					font-size: .7rem;
+					color: $font-color-light;
+				}
+			}
+			&:hover {
+				background: $light-bg;
+			}
+		}
+	}
+}
+
+
+/******** 6.15 Header Activity ********/
+ul.activity {
+	margin: 0 0 0 10px;
+	padding: 1rem;
+	li.activity-list {
+		position: relative;
+		border-left: 1px solid $border-bg;
+		&:after {
+			background-color: $white;
+			border: 2px solid lighten($blue, 10%);
+			@include roundedCorners(30);
+			bottom: 0;
+			content: "";
+			height: 10px;
+			width: 10px;
+			left: 0;
+			margin-left: -6px;
+			position: absolute;
+			top: 6px;
+		}
+		&:before {
+			border: 4px solid lighten($blue, 45%);
+			@include roundedCorners(30);
+			bottom: 0;
+			content: "";
+			height: 18px;
+			width: 18px;
+			left: 0;
+			margin-left: -10px;
+			position: absolute;
+			top: 2px;
+		}
+		.detail-info {
+			margin: 0 0 0 20px;
+			padding-bottom: 15px;
+			p.date {
+				margin: 0 0 2px 0;
+				padding: 0;
+				font-size: .75rem;
+				font-weight: 600;
+			}
+			p.info {
+				margin: 0;
+				font-size: .75rem;
+				color: $font-color-light;
+				line-height: 150%;
+			}
+		}
+		&:last-child .detail-info {
+			padding-bottom: 0;
+		}
+		&.info {
+			&:after {
+				border: 2px solid $blue;
+			}
+			&:before {
+				border: 4px solid lighten($blue, 50%);
+			}
+		}
+		&.success {
+			&:after {
+				border: 2px solid $green;
+			}
+			&:before {
+				border: 4px solid lighten($green, 50%);
+			}
+		}
+		&.danger {
+			&:after {
+				border: 2px solid $red;
+			}
+			&:before {
+				border: 4px solid lighten($red, 35%);
+			}
+		}
+		&.warning {
+			&:after {
+				border: 2px solid $yellow;
+			}
+			&:before {
+				border: 4px solid lighten($yellow, 35%);
+			}
+		}
+	}
+}
+
+
+/******** 6.16 Header Profile Dropdown ********/
+.header-profile-actions {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	a {
+		border-right: 1px dotted rgba(1, 118, 192, 0.1);
+		padding: .5rem 1rem;
+		transition: all 0.5s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		color: $font-color-light;
+		font-size: .725rem;
+		font-weight: 400;
+		&:hover {
+			color: $primary-color;
+		}
+		i {
+			font-weight: 300;
+			margin-bottom: .3rem;
+			font-size: 1.2rem;
+			vertical-align: text-top;
+		}
+		&:last-child {
+			border-right: 0;
+		}
+	}
+}
+
+
+/******** 6.17 Breadcrumb Container ********/
+.breadcrumb-container {
+	margin: 0 0 10px 0;
+	.breadcrumb {
+		margin: 12px 0 0 0;
+	}
+	.btn {
+		margin: 0 0 0 .3rem;
+	}
+}
+
+
+/******** 6.18 Content Wrapper ********/
+.content-wrapper-scroll {
+	padding: 0;
+}
+.content-wrapper {
+	padding: 0rem 1.5rem 0 1.5rem;
+	height: calc(100vh - 150px);
+	overflow: auto;
+}
+@media (max-width: 576px) {
+	.content-wrapper {
+		padding: 0rem 1rem 0 1rem;
+	}
+}
+
+
+/******** 6.19 Stats Tile ********/
+.stats-tile {
+	padding: 1rem;
+	margin: 0 0 20px 0;
+	@include roundedCorners(4);
+	background: $white;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	position: relative;
+	.sale-icon {
+		height: 60px;
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 15px;
+		text-align: center;
+		background: $primary-color-light;
+		@include roundedCorners(50);
+		i {
+			font-size: 1.5rem;
+			color: $primary-color;
+		}
+	}
+	.sale-details {
+		color: $primary-color;
+		h2 {
+			margin: 0;
+			line-height: 100%;
+		}
+		p {
+			margin: 0;
+			color: $font-color-light;
+		}
+		h5 {
+			font-size: .75rem;
+			font-weight: 400;
+			line-height: 150%;
+			color: $font-color-lighter;
+			i {
+				font-size: .8rem;
+				vertical-align: middle;
+				font-weight: 700;
+				margin: 0 3px 0 0;
+			}
+			span {
+				margin: 0 3px 0 0;
+				&.high {
+					color: $green;
+				}
+				&.low {
+					color: $red;
+				}	
+			}
+		}
+	}
+	.sale-graph {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		margin-top: -15px;
+	}
+}
+
+
+/******** 6.20 Stats Tile2 ********/
+.stats-tile2 {
+	padding: 1rem;
+	margin: 0 0 20px 0;
+	@include roundedCorners(4);
+	background: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	min-height: 163px;
+	max-height: 163px;
+	.sale-icon {
+		height: 60px;
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 15px;
+		text-align: center;
+		background: $primary-color-light;
+		border: 5px solid lighten($primary-color-light, 2%);
+		@include roundedCorners(100);
+		i {
+			font-size: 1.5rem;
+			color: $primary-color;
+		}
+	}
+	.sale-details {
+		color: $primary-color;
+		h2 {
+			margin: 0;
+			line-height: 100%;
+		}
+		p {
+			margin: 0;
+			color: $font-color-light;
+		}
+	}
+}
+
+
+/******** 6.21 Stats Tile3 ********/
+.stats-tile3 {
+	padding: 1.5rem 1rem 1rem 1rem;
+	margin: 0 0 20px 0;
+	@include roundedCorners(4);
+	background: $white;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	.sale-icon3 {
+		margin: 0 0 10px 0;
+		i {
+			font-size: 1.8rem;
+			color: $font-color-light;
+		}
+		img {
+			width: 36px;
+			height: 36px;
+		}
+	}
+	.stats-graph3 {
+		position: absolute;
+		top: 30px;
+		right: 15px;
+	}
+	.sale-details3 {
+		h3 {
+			margin: 0;
+			line-height: 100%;
+			color: $primary-color;
+			font-size: 1.4rem;
+		}
+		p {
+			margin: 0;
+			font-size: .75rem;
+			color: $font-color-lighter;
+		}
+	}
+}
+
+
+/******** 6.22 Stats Tile4 ********/
+.stats-tile4 {
+	padding: 1.5rem 1rem 1rem 1rem;
+	margin: 0 0 20px 0;
+	@include roundedCorners(4);
+	background: url(../img/shade.png);
+	background-size: cover;
+	background-position: center;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	.stats-icon4 {
+		margin: 0 0 1rem 0;
+		display: flex;
+		i {
+			font-size: 1.2rem;
+			color: $white;
+			text-shadow: none;
+			background: rgba(255, 255, 255, 0.1);
+			@include roundedCorners(50);
+			padding: 15px;
+		}
+	}
+	h3 {
+		margin: 0 0 .5rem 0;
+		line-height: 100%;
+		font-size: 1.6rem;
+	}
+	h4 {
+		margin: 0;
+		font-size: .75rem;
+	}
+	&.min-height {
+		min-height: 175px;
+	}
+}
+
+
+/******** 6.23 Stats Tile List ********/
+.stats-tiles-list {
+	@include roundedCorners(3);
+	border-top: 1px solid $border-bg;
+	border-bottom: 1px solid $border-bg;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	text-align: center;
+	margin: 1rem 0 0 0;
+	.tiles-list {
+		width: 100%;
+		padding: 5px;
+		border-right: 1px solid $border-bg;
+		img {
+			width: 30px;
+			height: 30px;
+			margin: 10px 0;
+		}
+		h2 {
+			color: $primary-color;
+			font-size: 1.4rem;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			color: $font-color-light;
+		}
+		&:first-child {
+			border-left: 1px solid $border-bg;
+		}
+	}
+}
+@media (max-width: 576px) {
+    .stats-tiles-list {
+        overflow: auto;
+        .tiles-list {
+            min-width: 100px;
+        }
+    }
+}
+
+
+/******** 6.24 Image Stats Tiles ********/
+.image-stats-tile {
+	margin: 0 0 32px 0;
+	display: flex;
+	align-items: center;
+	.image-stats-box {
+		img {
+			@include roundedCorners(3);
+			margin-right: 10px;
+			max-width: 80px;
+		}
+	}
+	.img-stats-details {
+		display: flex;
+		flex-direction: column;
+		p {
+			margin: 0 0 2px 0;
+			font-size: .75rem;
+			color: $font-color-lighter;
+		}
+		h5 {
+			margin: 0;
+			font-weight: 600;
+			font-size: .9rem;
+			color: $font-color-dark;
+		}
+	}
+	.weekly-graph-details {
+		margin-left: auto;
+	}
+}
+
+
+/******** 6.25 Earnings Detail ********/
+.earnings-detail {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 25px;
+	.earnings-info {
+		h5 {
+			margin: 3px 0 0 0;
+		}
+		p {
+			margin: 0;
+			font-size: .75rem;
+		}
+	}
+	.earnings-icon {
+		border: 1px solid $green;
+		background: lighten($light-green, 5%);
+		width: 36px;
+		height: 36px;
+		@include roundedCorners(30);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		i {
+			font-size: 1rem;
+			color: $green;
+		}
+		&.blue {
+			border: 1px solid $blue;
+			background: lighten($light-blue, 5%);
+			i {
+				font-size: 1rem;
+				color: $blue;
+			}
+		}
+		&.red {
+			border: 1px solid $red;
+			background: lighten($light-red, 5%);
+			i {
+				font-size: 1rem;
+				color: $red;
+			}
+		}
+	}
+}
+
+
+/******** 6.26 Top Users ********/
+.top-users-container {
+	margin: 1rem 0 0 0;
+	.top-user {
+		margin: 0 0 20px 0;
+		padding-bottom: .5rem;
+		display: flex;
+		align-items: flex-start;
+		img.avatar {
+			@include roundedCorners(30);
+			width: 48px;
+			height: 48px;
+			margin: 0 10px 0 0;
+		}
+		.user-details {
+			flex-direction: column;
+			flex: 1;
+			h6 {
+				margin: 0 0 .5rem 0;
+				font-size: .825rem;
+			}
+			.user-score {
+				.progress {
+					height: 4px;
+					margin: 0 0 .4rem 0;
+					@include roundedCorners(2);
+				}
+				.rank {
+					color: $font-color-light;
+					font-size: .725rem;
+				}
+			}
+		}
+	}
+}
+
+
+/******** 6.27 Customer Rating ********/
+ul.customer-rating {
+	li {
+		margin-bottom: 15px;
+		display: flex;
+		justify-content: flex-start;
+		.customer {
+			margin-right: 10px;
+			img {
+				width: 48px;
+				height: 48px;
+				@include roundedCorners(30);
+			}
+		}
+		.customer-review {
+			.stars {
+				margin: 10px 0 15px 0;
+				width: 100%;
+				img {
+					width: 12px;
+					height: 12px;
+				}
+			}
+			h5 {
+				margin: 0 0 9px 0;
+				font-size: .875rem;
+			}
+			h6.by {
+				margin: 0 0 10px 0;
+				font-size: .8rem;
+				font-weight: 400;			
+				a {
+					color: $font-color-light;
+				}
+			}
+			p {
+				margin: 0 0 5px 0;
+				line-height: 150%;
+				color: $font-color-lighter;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+
+/******** 6.28 Custom File ********/
+.custom-file {
+	min-height: 40px;
+	.custom-file-input {
+		padding: 10px 12px;
+		min-height: 40px;
+	}
+	.custom-file-label {
+		border: 1px solid $form-border;
+		min-height: 40px;
+		line-height: 26px;
+		color: $font-color;
+		@include roundedCorners(2);
+		&::after {
+			min-height: 38px;
+			background: $light-bg;
+			padding: 10px 12px;
+    		@include roundedCorners(2);
+		}
+	}
+}
+
+
+/******** 6.29 Custom Form Fields ********/
+.field-wrapper {
+	position: relative;
+	margin-bottom: 1rem;
+	margin-top: .5rem;
+	min-width: 90px;
+	.field-placeholder {
+		position: absolute;
+		box-sizing: border-box;
+		color: $primary-color;
+		background: $white;
+		@include roundedCorners(30);
+		font-size: .75rem;
+		font-weight: 600;
+		top: -12px;
+		left: 7px;
+		padding: 2px 7px;
+		z-index: 10;
+		text-align: left;
+	}
+	input, select, textarea {
+		border: 1px solid $form-border;
+		padding: 9px 12px;
+		@include roundedCorners(2);
+		width: 100%;
+		min-height: 40px;
+		font-size: .725rem;
+		color: $input-color;
+	}
+	input:hover, textarea:hover {
+		border: 1px solid $primary-color;
+	}
+	input:focus, textarea:focus {
+		outline-color: $primary-color;
+	}
+	.input-group {
+		.btn {
+			font-size: .75rem;
+			font-weight: 600;
+		}
+	}
+}
+.field-wrapper-group {
+	display: flex;
+	.field-wrapper {
+		flex: 1;
+	}
+	.input-icon-block {
+		max-height: 40px;    
+		min-width: 40px;
+		margin: .5rem 0 0 .2rem;
+    @include roundedCorners(2);
+		i {
+			font-size: .9rem;
+			display: block;
+		}
+	}
+}
+.form-section-header {
+	@include roundedCorners(3);
+	background: $primary-color-light;
+	margin: .5rem 0 1rem 0;
+	padding: .6rem .9rem;
+	font-size: .8rem;
+	font-weight: 600;
+	color: $font-color;
+	span.title-info {
+		font-size: .7rem;
+		font-weight: 400;
+		color: $font-color-lighter;
+		margin: 0 0 0 5px;
+	}
+	&.light-bg {
+		background-color: $light-bg;
+	}
+}
+
+
+/******** 6.30 Checkbox Container ********/
+.checkbox-container {
+	.form-check {
+		margin: 1rem .5rem 0 0;
+	}
+	.field-placeholder {
+		left: -5px;
+		background: transparent;
+	}
+}
+
+
+/******** 6.31 Form Actions Footer ********/
+.form-actions-footer {
+	background: $form-label-bg;
+	padding: 1rem;
+	@include roundedCorners(2);
+}
+
+
+/******** 6.32 Custom Button Group ********/
+.custom-btn-group {
+	display: flex;
+	flex-wrap: wrap;
+	&.right-align {
+		justify-content: flex-end;
+	}
+	.btn {
+		margin: .3rem;
+	}
+	.btn-sm {
+		margin: .2rem .1rem;
+	}
+}
+.custom-icon-group {
+	display: flex;
+	flex-wrap: wrap;
+	&.right-align {
+		justify-content: flex-end;
+	}
+	.btn {
+		margin: .3rem;
+		i {
+			margin: 0;
+		}
+	}
+	.btn-sm {
+		margin: .2rem .1rem;
+		i {
+			margin: 0;
+		}
+	}
+}
+
+
+/******** 6.33 Graph Day Selection ********/
+.graph-day-selection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	.btn {
+		font-size: .7rem;
+		font-weight: 600;
+		padding: .2rem .8rem;
+		border: 0;
+		color: $font-color;
+		background: transparent;
+		@include roundedCorners(30);
+		&.active {
+			background: $primary-color-light;
+			color: $primary-color;
+		}
+		&:hover {
+			background: $light-bg;
+		}
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+	a {
+		display: flex;
+		align-items: center;
+		color: $primary-color;
+		font-size: .65rem;
+		font-weight: 600;
+		padding: .2rem .8rem;
+		line-height: 1.5;
+		background: $primary-color-light;
+		@include roundedCorners(30);
+		&:hover {
+			color: $primary-color;
+		}
+		&.reportrange {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			color: $primary-color;
+			font-weight: 600;
+			span.range-text {
+				margin: 0 5px 0 5px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.graph-day-selection {
+		.btn {
+			padding: .2rem .5rem;
+		}
+	}
+}
+
+
+/******** 6.34 Stats ********/
+.stats-list-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0;
+	margin: 0;
+	.stats-list-item {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		.stats-icon {
+			@include roundedCorners(5);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 36px;
+			width: 36px;
+			margin-right: 10px;
+			i {
+				font-size: 1rem;
+			}
+		}
+		.stats-info {
+			flex-direction: row;
+			h6.stats-title {
+				font-size: .7rem;
+				margin: 0;
+				font-weight: 600;
+				color: $font-color-light;
+			}
+			p.stats-amount {
+				font-size: .8rem;
+				font-weight: 600;
+				margin: 0;				
+			}
+		}
+		&.primary {
+			.stats-icon {
+				background: $primary-color-light;
+				i {
+					color: $primary-color;
+				}
+			}
+		}
+		&.secondary {
+			.stats-icon {
+				background: $secondary-color-light;
+				i {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}
+
+
+/******** 6.35 Weekly Earnings ********/
+.weekly-earnings {
+	text-align: center;
+	.svg-container {
+		width: 80px;
+		margin: -10px auto 0 auto;
+	}
+	p {
+		font-size: .65rem;
+		color: $font-color-light;
+	}
+	h5 {
+		margin: 0;
+	}
+}
+
+
+/******** 6.36 Monthly Earnings ********/
+.monthly-earnings {
+	text-align: center;
+	margin: 1rem 0 0 0;
+	background: lighten($primary-color-light, 2%);
+	color: $primary-color;
+	padding: .8rem 1rem;
+	@include roundedCorners(5);
+	.svg-container {
+		width: 80px;
+		margin: -10px auto 0 auto;
+	}
+	p {
+		font-size: .75rem;
+	}
+	h4 {
+		margin: 0;
+	}
+	&.red {
+		background: lighten($light-red, 4%);
+		color: $red;
+	}
+	&.blue {
+		background: lighten($light-blue, 4%);
+		color: $blue;
+	}
+	&.yellow {
+		background: lighten($light-yellow, 6%);
+		color: $yellow;
+	}
+}
+
+
+/******** 6.37 Earnings Badge ********/
+.earnings-badge-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.earnings-badge {
+		text-align: center;
+		margin: 0 3px;
+		background: rgba(0, 0, 0, 0.05);
+		padding: .4rem 1rem;
+		@include roundedCorners(5);
+		min-width: 120px;
+		p {
+			font-size: .75rem;
+			margin: 0;
+			color: rgba(255, 255, 255, 0.5);
+		}
+		h4 {
+			margin: 0;
+			color: $white;
+		}
+	}
+}
+
+
+/******** 6.38 Report Stats ********/
+.report-card {
+	background: #5A4E9A url('../img/pattern.svg') no-repeat;
+	background-position: center 100px;
+	background-size: cover;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	padding: 0;
+	min-height: 324px;
+	position: relative;
+	.graph {
+		padding: 0;
+	}
+	.report-card-body {
+		padding: 0 1.25rem 1.25rem 1.25rem;
+		p {
+			font-size: .725rem;
+			color: $white;
+			margin: -10px 0 0 0;
+		}
+		.btn {
+			padding: .5rem 1.3rem;
+			@include roundedCorners(50);
+			font-weight: 400;
+			margin: 15px 0;
+		}
+	}	
+}
+
+
+/******** 6.39 Top Rated Items ********/
+.top-items-container {
+	.top-item-img {
+		max-height: 180px;
+		margin: auto;
+		display: flex;
+	}
+	.top-item-details {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		h6 {
+			margin: 15px 0 10px 0;
+			color: $font-color-light;
+		}
+		.rating-block {
+			margin: 0 auto 10px auto;
+			width: 124px !important;
+			display: flex;
+    	align-items: center;    	
+			img {
+				width: 16px;
+				height: 16px;
+			}
+			.rating-count {
+				font-size: 14px;
+				margin: 0 0 0 3px;
+				font-weight: 300;
+				color: $font-color-lighter;
+			}
+		}
+	}
+}
+
+
+/******** 6.40 Cakes List ********/
+.cakes-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	li {
+		width: 50%;
+		a {
+			padding: 6px 0;
+			display: flex;
+			align-items: center;
+			color: $font-color;
+			&:hover {
+				color: $font-color-light;
+			}
+			.badge {
+				margin-right: 8px;
+				min-width: 32px;
+				padding: .3rem;
+				font-size: .725rem;
+				border: 1px solid $border-bg;
+				color: $primary-color;
+				font-weight: 700;
+				background: transparent;
+			}
+		}
+	}
+}
+@media (max-width: 420px) {
+	.cakes-list {
+		li {
+			width: 100%;
+		}
+	}
+}
+
+
+/******** 6.41 Sales Card ********/
+.sales-card {
+	background: $green;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	padding: 0;
+	min-height: 324px;
+	color: $white;
+	.sales-card-header {
+		padding: 1.25rem 1.25rem 0 1.25rem;
+		p {
+			font-size: .75rem;
+		}
+		h3 {
+			margin: 0 0 1rem 0;			
+		}
+	}
+	.graph {
+		padding: 0;
+		margin: -30px 0 0 0;
+		.apexcharts-legend-text {
+			color: rgba(255, 255, 255, 0.5) !important;
+		}
+		.apexcharts-xaxis-texts-g {
+			text {
+				fill: rgba(255, 255, 255, 0.5) !important;
+			}
+		}
+		.apexcharts-legend-marker {
+			border-radius: 30px !important;
+		}
+		.apexcharts-xaxis {
+			line {
+				stroke: transparent !important;
+			}
+		}
+	}
+	.sales-card-body {
+		padding: 0 1.25rem 1.25rem 1.25rem;
+	}	
+}
+
+
+/******** 6.42 Followers Card ********/
+.followers-card {
+	background: #002ca9;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	padding: 1.25rem 1.25rem;
+	min-height: 324px;
+	p {
+		font-size: .75rem;
+		color: rgba(255, 255, 255, 0.5);
+	}
+	h3 {
+		margin: 0 0 1rem 0;
+		color: $white;
+	}
+	.btn {
+		padding: .5rem 1.3rem;
+		@include roundedCorners(50);
+		font-weight: 400;
+	}
+	img {
+		max-height: 160px;
+		margin: 20px auto 0 auto;
+	}
+}
+
+
+/******** 6.43 Tickets ********/
+.tickets-container {
+	margin: 0;
+	li {
+		margin: 0 0 7px 0;
+		padding-bottom: .5rem;
+		display: flex;
+		align-items: center;
+		img.avatar {
+			@include roundedCorners(30);
+			width: 48px;
+			height: 48px;
+			margin: 0 10px 0 0;
+		}
+		.ticket-details {
+			flex-direction: column;
+			flex: 1;
+			h6 {
+				margin: 0 0 .2rem 0;
+				font-size: .825rem;
+			}
+			.ticket-time {
+				color: $font-color-lighter;
+				font-size: .7rem;
+			}
+		}
+		.ticket-status {
+			margin-left: auto;
+			.badge {
+				min-width: 70px;
+			}
+		}
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+
+/******** 6.44 Chat Widget ********/
+.chats {
+	position: relative;
+	padding: 0;
+	li {
+		margin-bottom: 25px;
+		&.chats-left, &.chats-right {
+			position: relative;
+		}
+		img {
+			width: 50px;
+			height: 50px;
+			@include roundedCorners(50);
+		}  
+		.chats-avatar {
+			float: left;
+		}
+		&.chats-right {
+			> .chats-avatar {
+				float: right;
+			}
+		}
+		.chats-name {
+			font-size: .75rem;
+			text-align: center;
+			margin-top: 5px;
+			color: $font-color-light;
+		}
+		.chats-hour {
+			margin: 0 0 0 70px;
+			padding: 2px;
+			margin-bottom: 20px;
+			font-size: .65rem;
+			> span {
+				font-size: .8rem;
+				color: $green;
+			}
+		}
+		.chats-text {
+			margin: 0 0 0 70px;
+			padding: 15px;
+			@include roundedCorners(20);
+			background-color: $light-bg;
+			left: 15px;
+			line-height: 170%;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 28px;
+				left: 52px;
+				border: 10px solid;
+				border-color: transparent $light-bg transparent transparent;
+			}
+		}
+		&.chats-right {
+			> .chats-text {
+				text-align: right;
+				right: 16px;
+				margin: 0 70px 0 0;
+				background-color: $light-bg;
+				&:before {
+					left: auto;
+					right: 52px;
+					border-color: transparent transparent transparent $light-bg;
+				}
+			}
+			> .chats-hour {
+				text-align: right;
+				margin: 0 70px 0 0;
+			}
+		}
+	}
+}
+
+
+/******** 6.45 Todos ********/
+.todo-container {
+	margin: 0 0 0 10px;
+	.todo-body {
+		margin: 0;
+		padding: 0;
+		border-left: 1px solid $border-bg;
+		li.todo-list {
+			position: relative;
+			display: block;
+			cursor: pointer;
+			.dot {
+				position: absolute;
+				top: 4px;
+				left: -10px;
+				color: $primary-color;
+				&:before {
+					font-size: 1.2rem;
+					content: "\e836";
+					font-family: 'icomoon';
+					background: $white;
+					@include roundedCorners(5);
+				}
+			}
+			.todo-info {
+				line-height: 100%;
+				margin: 0 0 0 20px;
+				padding-bottom: 20px;
+				p {
+					line-height: 100%;
+					margin-bottom: .3rem;
+					span.time {
+						float: right;
+						font-size: .8rem;
+					}
+					&.dt {
+						color: $font-color-lighter;
+						font-size: .725rem;
+					}
+				}
+				.todo-type {
+					color: $font-color-light;
+					font-size: .825rem;
+				}
+			}
+			&.done {
+				text-decoration: line-through;
+				@include transition(all, 0.3s, ease-out);
+				color: rgba(0, 0, 0, 0.4);
+				.dot {
+					&:before {
+						content: "\e86c";
+						font-family: 'icomoon';
+					}
+				}
+			}
+			&:last-child {
+				.todo-info {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+/******** 6.46 Statistics ********/
+ul.statistics {
+	margin: 0;
+	li {
+		display: flex;
+		align-items: center;
+		margin: 0 0 13px 0;
+		.stat-icon {
+			background: $primary-color;
+			width: 36px;
+			height: 36px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include roundedCorners(50);
+			margin: 0 10px 0 0;
+			i {
+				font-size: 1rem;
+				color: $white;
+				text-shadow: none;
+			}
+		}
+	}
+}
+
+
+/******** 6.47 Daily Goal ********/
+.goal-container {
+	margin-bottom: 20px;
+	background: $white;
+	padding: 1rem;
+	@include roundedCorners(4);
+	min-height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	overflow: hidden;
+	&:after {
+		background: url(../img/dashed-circles-dark.svg) no-repeat;
+		background-size: 100%;
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin: -75px -15px 0 0;
+		content: '';
+	}
+	.goal-info {		
+		h5 {
+			margin: 0;
+			font-weight: 700;
+			line-height: 100%;
+			color: $primary-color;
+		}
+		h6 {
+			margin: 10px 0 0 0;
+			font-weight: 400;
+			font-size: .85rem;
+		}
+	}
+	.goal-graph {
+		margin: 0;
+		width: 90px;
+		height: 90px;
+	}
+}
+
+
+/******** 6.48 Payments Card ********/
+.payments-card {
+	margin-bottom: 20px;
+	padding: 1rem;
+	background: $white;
+	@include roundedCorners(4);
+	min-height: 140px;
+	h4 {
+		margin: 0;
+		font-weight: 700;
+		line-height: 100%;
+		color: $primary-color;
+	}
+	h6 {
+		margin: 0 0 10px 0;
+		font-weight: 400;
+		font-size: .8rem;
+	}
+	.btn {
+		font-weight: 400;
+		margin-left: 0;
+		i {
+			margin: 0 5px 0 0;
+		}
+	}
+	&.primary {
+		background: $primary-color;
+		color: $white;
+		h4 {
+			color: $white;
+		}
+	}
+}
+
+
+/******** 6.49 Graph Card ********/
+.graph-card {
+	margin-bottom: 20px;
+	position: relative;
+	padding: 1rem;
+	background: $white;
+	@include roundedCorners(5);
+	min-height: 140px;
+	overflow: hidden;
+	position: relative;
+	h4 {
+		margin: 0;
+		font-weight: 700;
+		line-height: 100%;
+		color: $primary-color;
+	}
+	h6 {
+		margin: 0 0 10px 0;
+		font-weight: 400;
+		font-size: .8rem;
+	}
+	.graph-placeholder {
+		position: absolute;
+		bottom: -30px;
+		left: -2px;
+		right: -2px;
+	}
+}
+
+
+/******** 6.50 Product Cards ********/
+.product-card {
+	background: $white;
+	border: 0;
+	box-shadow: none;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	.product-card-body {
+		padding: 1rem 1rem;
+		position: relative;
+		.product-title {
+			margin-bottom: .7rem;
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 100%;
+		}
+		.product-price {
+			display: flex;
+			flex-direction: row;
+			font-size: .8rem;
+			.disount-price {
+				color: $font-color;
+				margin-right: 7px;
+			}
+			.actucal-price {
+				color: $font-color-light;
+				margin-right: 7px;
+				text-decoration: line-through;
+			}
+			.off-price {
+				color: $primary-color;
+			}
+		}
+		.product-rating {
+			margin: 8px 0;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			.rating-stars {
+				width: 90px !important;
+				line-height: 100%;
+				img {
+					width: 14px;
+					height: 14px;
+				}
+			}
+			.total-ratings {
+				font-size: .8rem;
+				color: $font-color-light;
+			}
+		}
+		.product-description {
+			min-height: 50px;
+			font-size: .75rem;
+			margin: 0 0 8px 0;
+			color: $font-color-light;
+		}
+		.product-actions {
+			display: flex;
+			flex-direction: row;
+			.btn {
+				margin-right: 5px;
+			}
+		}
+	}
+	.product-card-img-top {
+		border-top-right-radius: 4px;
+		border-top-left-radius: 4px;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		flex-shrink: 0;
+    width: 100%;
+	}
+}
+
+
+/******** 6.51 Ratings Block ********/
+.rating-block {
+	width: 70px !important;
+	line-height: 100%;
+	img {
+		width: 10px;
+		height: 10px;
+	}
+}
+.rating-block-lg {
+	width: 90px !important;
+	line-height: 100%;
+	img {
+		width: 14px;
+		height: 14px;
+	}
+}
+
+
+/******** 6.52 Product Table ********/
+table.products-table {
+	background: $white;
+	margin-bottom: 0;
+	padding: .6rem;
+	thead {
+		tr {
+			margin: 0 0 15px 0;
+			transition: all 0.5s ease;
+			th {
+				background: $table-header;
+				border: 0 !important;
+				color: $white;
+				&:first-child {
+					@include roundedCornersAll(4px, 0, 0, 4px);
+				}
+				&:last-child {
+					@include roundedCornersAll(0, 4px, 4px, 0);
+				}
+			}
+		}
+	}
+	tbody {
+		tr {
+			margin: 0 0 5px 0;
+			border-bottom: 1px solid $table-border;
+			td {
+				background: $table-td;
+				transition: all 0.5s ease;
+				border: 0;
+				padding: .6rem;
+				vertical-align: middle;
+				color: $table-color;
+				&:first-child {
+					@include roundedCornersAll(4px, 0, 0, 4px);
+				}
+				&:last-child {
+					@include roundedCornersAll(0, 4px, 4px, 0);
+				}
+				img.user {
+					width: 40px;
+					height: 40px;
+					@include roundedCorners(4);
+				}
+				.badge {
+					@include roundedCorners(30);
+					padding: .35rem .5rem;
+					min-width: 60px;
+					background: $primary-color-light;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+table.products-table td .media-box {
+	display: flex;
+	align-items: center;
+	img.media-avatar {
+		height: 40px;
+		width: 40px;
+		margin: 0 10px 0 0;
+	}
+	.media-box-body {
+		flex: 1;
+		a {
+			font-size: .75rem;
+			font-weight: 600;
+			margin: 0 0 5px 0;
+		}
+		p {
+			font-size: .7rem;
+			color: #969ea5;
+			margin: 0;
+		}
+	}
+}
+
+
+/******** 6.53 Create Offer ********/
+.create-offer-container {
+	.form-control {
+		margin: 0 0 .3rem 0;
+		max-height: 69px;
+	}
+	.share-thoughts-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.btn {
+			max-height: 32px;
+			padding: 0.35rem .75rem;
+		}
+		.share-icons {
+			display: flex;
+			a {
+				width: 32px;
+				height: 32px;
+				margin: 0 .3rem 0 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: $light-bg;
+				@include roundedCorners(3);
+				i {
+					color: $font-color;
+					font-size: .9rem;
+				}
+			}
+		}
+	}
+}
+
+
+/******** 6.54 Social Stats ********/
+.social-tile {
+	position: relative;
+	background: $white;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	padding: 1.25rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.social-icon {
+		height: 60px;
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 15px;
+		text-align: center;
+		background: $primary-color-light;
+		@include roundedCorners(50);
+		i {
+			font-size: 1.5rem;
+			color: $primary-color;
+		}
+	}
+	.social-graph {
+		margin: 0 0 10px 0;
+	}
+	h2 {
+		margin: 0;
+		color: $primary-color;
+	}
+	p {
+		color: $font-color-lighter;
+	}	
+}
+
+
+/******** 6.55 Recent Orders ********/
+ul.recent-orders {
+	li {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		.order-img {
+			position: relative;
+			img {
+				height: 50px;
+				@include roundedCorners(3);
+			}
+			.badge {
+				position: absolute;
+				top: 10px;
+				left: 0px;
+				font-weight: 400;
+				@include roundedCornersAll(0, 3px, 3px, 0);
+				font-size: .65rem;
+				padding: 3px 4px 4px 4px;
+			}
+		}
+		.order-details {
+			margin-left: 15px;
+			h5.order-title {
+				margin: 0 0 5px 0;
+				line-height: 120%;
+				font-size: .9rem;
+			}
+			p.order-desc {
+				line-height: 120%;
+				font-size: .75rem;
+				color: $font-color-lighter;
+			}
+			span.order-date {
+				color: $primary-color;
+				font-size: .7rem;
+			}
+		}
+	}
+}
+
+
+/******** 6.56 Dashboard Header ********/
+.dashboard-header {
+	position: relative;
+	padding: 3rem 2rem 0 2rem;
+	&:after {
+		content: '';
+		min-height: 280px;
+		@include roundedCornersAll(10px, 10px, 100px, 100px);
+		background: $primary-color;	
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	.dashboard-header-content {
+		z-index: 100;
+		position: relative;
+
+		// Welcome Title
+		.welcome-title {
+			margin: 2rem auto;
+			text-align: center;
+
+			h1 {
+				font-weight: 300;
+				color: $white;	
+				margin: 0 auto;
+				display: inline-block;
+				position: relative;
+				
+				// Winner Icon
+				.winner-icon {
+					position: absolute;
+					left: -7px;
+					top: -55px;
+					img {
+						width: 60px;
+						height: 60px;
+					}
+				}
+			}
+
+		}
+
+		// Transparent Buttons
+		.btn {
+			margin: 0 0 0 .3rem;
+			background-color: rgba(255, 255, 255, 0.1);
+			color: rgba(255, 255, 255, 0.8);
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.2);
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+
+		// DateRange
+		.field-wrapper {
+			input {
+				border:1px solid rgba(255, 255, 255, 0.2);
+				color: rgba(255, 255, 255, 0.5);
+				background: transparent;
+				min-width: 170px;
+				&:focus {
+					outline: none !important;
+				}
+			}
+			.input-group-text {
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				background: transparent;
+				border-left: 0px;
+				i {
+					text-shadow: none;
+					color: rgba(255, 255, 255, 0.5);
+				}
+			}
+			.field-placeholder {
+				background-color:  $primary-color;
+				font-size: .65rem;
+				font-weight: 400;
+				color:  rgba(255, 255, 255, 0.5);
+				padding: 2px 10px;
+			}
+		}
+		// Tiles
+		.sales-tile-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0 auto 1rem auto;
+			.sales-tile {
+				background-color: $white;
+				@include roundedCorners(10);
+				padding: 1rem;
+				margin: .5rem;
+				min-width: 110px;
+				min-height: 110px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				h1 {
+					margin: 0 0 .3rem 0;
+					color: $primary-color;
+					font-weight: 400;
+				}
+				h6 {
+					font-size: .8rem;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.dashboard-header {
+		padding: 3rem 1rem 0 1rem;
+		.dashboard-header-content {
+
+			// Welcome Title
+			.welcome-title {
+				margin-top: 5rem;
+				h1 {
+					font-size: 1.8rem;
+				}
+			}
+			// Transparent Buttons
+			.btn {
+				i {
+					margin: 0;
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 420px) {
+	.dashboard-header {
+		padding: 3rem .4rem 0 .4rem;
+		.dashboard-header-content {
+			// Transparent Buttons
+			.btn {
+				display: none;
+			}
+		}
+	}
+}
+
+
+/******** 6.57 Reports Summary ********/
+.reports-summary {
+	position: relative;
+	padding: 2rem 1rem 0 1rem;
+	.reports-summary-block {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 1.5rem 0;
+		h5 {
+			margin: 0 0 .4rem 0;
+			font-size: .825rem;
+		}
+		h6 {
+			margin: 0;
+			font-weight: 400;
+			font-size: .75rem;
+			color: $font-color-lighter;
+		}
+	}
+}
+@media (max-width: 420px) {
+	.reports-summary {
+		padding: 0;
+	}
+}
+
+
+/******** 6.58 Profile Header ********/
+.profile-header {
+	position: relative;
+	padding: 0;
+	margin-bottom: 20px;
+	// Welcome Title
+	h1 {
+		font-weight: 300;
+		color: $primary-color;
+		font-size: 1.8rem;
+		margin: 0 auto 1rem auto;	
+	}
+	.profile-header-content {
+		@include roundedCorners(4);
+		background: lighten($pink, 15%);
+		padding: 1rem 1.5rem 1rem 1.5rem;
+		display: flex;
+		align-items: center;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			background: url('../img/login-bg.jpg');
+			background-position: center;
+			background-size: cover;
+			@include roundedCorners(4);
+			top: 0;
+			left: 0;
+			right: 0;			
+			bottom: 0;
+			opacity: 0.3;
+		}
+		.profile-header-tiles {
+			width: 100%;
+			margin-right: 1rem;
+			z-index: 100;
+			// Profile Tiles
+			.profile-tile {
+				background-color: $white;
+				@include roundedCorners(4);
+				padding: .6rem;
+				margin: .2rem 0;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				> .icon {
+					width: 36px;
+					height: 36px;
+					@include roundedCorners(50);
+					margin: 0 .6rem 0 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $pink;
+					i {
+						font-size: 1rem;
+						color: $white;
+						text-shadow: none;
+					}
+				}
+				h6 {
+					margin: 0;
+					line-height: 150%;
+					font-weight: 400;
+					font-size: .8rem;
+					color: $font-color-light;
+					span {
+						font-weight: 600;
+						color: $font-color;
+					}
+				}
+			}
+		}
+		.profile-avatar-tile {
+			background-color: $white;
+			@include roundedCorners(4);
+			padding: .7rem;
+			margin: -60px 0 0 auto;
+			z-index: 100;
+			img {
+				@include roundedCorners(4);
+				width: 180px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.profile-header {
+		.profile-header-content {
+			flex-direction: column-reverse;
+			.profile-header-tiles {
+				margin-right: 0;
+			}
+			.profile-avatar-tile {
+				margin: 20px 0;
+			}
+		}
+	}
+}
+
+
+/******** 6.59 Consulting Header ********/
+.consulting-banner {
+	background: $primary-color;
+	@include roundedCorners(4);
+	margin: 10px 0 20px 0;
+	position: relative;
+	min-height: 161px;
+	.consulting-banner-bg {
+		background-image: url(../img/consulting.svg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		right: 20px;
+		top: -40px;	
+		width: 220px;
+		height: 220px;
+		z-index: 100;
+	}
+	.consulting-body {
+		padding: 1.5rem 1.5rem 1rem 1.5rem;
+		position: relative;
+		overflow: hidden;
+		z-index: 101;
+		&:before {
+			content: '';
+			background: url(../img/lines-bg.svg) no-repeat;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: absolute;
+			right: -25px;
+			bottom: -25px;
+			width: 420px;
+			height: 150px;
+			opacity: 0.4;
+		}
+	}
+	.consulting-content {
+		color: $white;
+		padding: 1rem 0;
+		h4 {
+			font-size: 1.4rem;
+			line-height: 180%;
+		}
+		p {
+			font-size: .8rem;
+			opacity: .5;
+			line-height: 150%;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.consulting-banner {
+		margin: 30px 0 20px 0;
+		.consulting-body {
+			padding: 8.5rem 1.5rem 1rem 1.5rem;
+		}
+	}
+}
+.consulting-card {
+	background: $white;
+	@include roundedCorners(4);
+	padding: 1.25rem 1.25rem;
+	margin: 0 0 20px 0;
+	position: relative;
+	overflow: hidden;
+	min-height: 190px;
+	.consulting-card-bg {
+		background-image: url(../img/consulting2.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		right: 20px;
+		bottom: -10px;	
+		width: 80px;
+		height: 130px;
+		z-index: 100;
+	}
+	&:before {
+		content: '';
+		background: url(../img/lines-bg2.svg) no-repeat;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		right: -45px;
+		bottom: -55px;
+		width: 300px;
+		height: 200px;
+		opacity: 0.4;
+	}
+	.consulting-card-body {
+		z-index: 101;
+		position: relative;
+		margin-right: 110px;
+		h4 {
+			color: $primary-color;
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: .8rem;
+			margin: 1rem 0 2rem 0;
+			color: $font-color-light;
+			line-height: 150%;
+		}
+		.btn {
+			padding: .35rem .75rem;
+			font-size: .8rem;
+		}
+	}
+}
+.subscription-card {
+	background: $primary-color;
+	@include roundedCorners(4);
+	padding: 1.25rem 1.25rem;
+	margin: 0 0 20px 0;
+	color: $white;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: '';
+		background: url(../img/lines-bg2.svg) no-repeat;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		right: -45px;
+		bottom: -55px;
+		width: 300px;
+		height: 200px;
+		opacity: 0.4;
+	}
+	h4 {		
+		font-size: 1.2rem;
+	}
+	p {
+		font-size: .8rem;
+		opacity: .5;
+		margin: 0 0 .5rem 0;
+		line-height: 150%;
+	}
+	.btn {
+		padding: .35rem .75rem;
+		font-size: .8rem;
+		z-index: 1000;
+		position: relative;
+	}
+}
+.schedule-sesion-form {
+	padding-left: 20px;
+	border-left: 1px solid #dbdaea;
+}
+
+
+/******** 6.60 Account Settings ********/
+.change-img-avatar {
+	max-height: 174px;
+	display: flex;
+	margin: 0 auto 10px auto;
+}
+.account-settings-block {
+	border-left: 1px solid $border-bg;
+	margin-bottom: 20px;
+	height: 100%;
+	padding: 0 0 0 1rem;
+	.settings-block {
+		margin-bottom: 1rem;
+		.settings-block-title {
+			margin: 0 0 .7rem 0;
+    		font-size: .825rem;
+    		font-weight: 400;
+		}
+		.settings-block-body {
+			padding: 0;
+		}
+	}
+}
+@media (max-width: 992px) {
+	.account-settings-block {
+		border-left: 0;
+		padding: 0;
+	}
+}
+.pricing-chnage-plan {
+	margin: 0 0 1rem 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	a {
+		padding: 5px;
+		@include roundedCorners(3);
+		min-width: 70px;
+		max-width: 70px;
+		min-height: 70px;
+		margin: 0 10px 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background: $white;
+		border: 1px solid $border-bg;
+		&:hover {
+			background-color: lighten($light-blue, 5%);
+			border: 1px solid $light-blue;
+		}
+		> h5 {
+			font-size: .9rem;
+			margin: 0 0 5px 0;
+			font-weight: 400;
+			color: $primary-color;
+		}
+		> h6 {
+			font-size: .7rem;
+			margin: 0;
+			font-weight: 400;
+			color: $font-color-light;
+		}
+		&.active-plan {
+			background: $primary-color;
+			border: 1px solid $primary-color;
+			> h5 {
+				color: $white;
+			}
+			> h6 {
+				color: $white;
+			}
+		}
+	}
+}
+
+
+/******** 6.61 Polls ********/
+.polls-container {
+	p {
+		color: $font-color-light;
+		font-size: .75rem;
+		margin: 0 0 1rem 0;
+	}
+	.poll-block {
+		margin: 0 0 1.5rem 0;
+		.poll-block-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0;
+			.score {
+				font-size: .65rem;
+			}
+		}
+		.progress {
+			@include roundedCorners(50);
+			.progress-bar {
+				font-size: .65rem;
+			}
+		}
+	}
+}
+
+
+/******** 6.62 Timeline Activity ********/
+.timeline-activity {
+	margin: 0;
+	.activity-log {
+		padding-left: 1.8rem;
+		padding-bottom: 1.5rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 5px;
+			left: 0px;
+			background: $primary-color;
+			border: 3px solid $light-color;
+			width: 15px;
+			height: 15px;
+			@include roundedCorners(50);
+			z-index: 1;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			left: 7px;
+			top: 10px;
+			border-left: 1px dashed $border-bg;
+			height: 100%;
+			width: 1px;
+		}
+		.log-name {
+			font-weight: 600;
+		}
+		.log-details {
+			font-size: .8rem;
+			color: $font-color-light;
+		}
+		.log-time {
+			color: $font-color-light;
+			margin-left: .5rem;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}	
+}
+
+
+/******** 6.63 Stacked Images ********/
+.stacked-images {
+	display: flex;
+	img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		@include roundedCorners(50);
+		overflow: hidden;
+		margin-right: -10px;
+		margin-right: -10px;
+		border: 2px solid $white;
+		background: $light-bg;
+		letter-spacing: .03rem;
+		&.sm {
+			width: 36px;
+			height: 36px;
+		}
+	}
+	.plus {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		@include roundedCorners(50);
+		overflow: hidden;
+		margin-right: -10px;
+		margin-right: -10px;
+		border: 2px solid $white;
+		background: $primary-color;
+		letter-spacing: .03rem;
+		font-weight: 700;
+		font-size: .7rem;
+		&.sm {
+			width: 36px;
+			height: 36px;
+			color: $white;
+		}
+	}
+}
+
+
+/******** 6.64 Gallery ********/
+.gallery {
+	margin: 0 auto;
+	a {
+		border: 1px solid $border-bg;
+		@include roundedCorners(4);
+		position: relative;
+		overflow: hidden;
+		@include transition(all, 0.3s, ease-out);
+		display: block;
+		margin: 0 0 2px 0;
+		opacity: 1;
+		padding: 3px;
+		img {
+			@include roundedCorners(3);
+		}
+		.overlay {
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			position: absolute;
+			z-index: 20;
+			background: rgba(0, 0, 0, 0.5);
+			overflow: hidden;
+			@include transition(all, 0.5s, ease-out);
+		}
+		.expand {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 100;
+			border: 2px solid $yellow;
+			text-align: center;
+			color: $yellow;
+			line-height: 32px;
+			@include roundedCorners(30);
+			font-size: 20px;
+			margin-left: -18px;
+			margin-top: -18px;
+			width: 36px;
+			height: 36px;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			transition: all 0.5s;
+		}
+		&:hover {
+			opacity: 1;
+			.overlay {
+				opacity: 1;
+			}
+			span.expand {
+				width: 36px;
+				height: 36px;
+				@include roundedCorners(5);
+			}
+		}
+	}
+}
+
+
+/******** 6.65 Gallery Tiles ********/
+.gallery-tiles {
+	img {
+		padding: 5px;
+		@include roundedCorners(8);
+	}
+}
+
+
+/******** 6.66 Icons Container ********/
+.icons-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	span {
+		font-size: 1rem;
+		text-align: center;
+		cursor: pointer;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		color:$font-color-light;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		background: $light-color;
+		@include roundedCorners(3);
+		margin: 2px;
+	  	&:hover {
+			background-color: $primary-color;
+			text-shadow: none;
+			color: $white;
+		}
+	}
+}
+
+
+/******** 6.67 Chart Heights ********/
+.chart-height {
+	position: relative;
+	height: 250px;
+}
+.chart-height-md {
+	position: relative;
+	height: 220px;
+}
+.chart-height-sm {
+	position: relative;
+	height: 180px;
+}
+.chart-height-xl {
+	position: relative;
+	height: 300px;
+}
+
+
+
+/************************************************
+	************************************************
+				7. Authentication CSS
+	************************************************
+************************************************/
+
+/******** 7.1 Login Screen ********/
+.login-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	.login-about {
+		height: 100%;	
+		background: rgba(255, 255, 255, 0.6);
+		position: relative;
+		padding: 3rem 3rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		color: lighten($black, 15%);
+		.slogan {
+			display: flex;
+			flex-direction: column;
+			font-weight: 300;
+			text-transform: uppercase;
+			position: relative;			
+			span {
+				font-size: 4rem;
+				line-height: 120%;
+				&:first-child {
+					font-size: 4.5rem;
+				}
+				&:last-child {
+					font-size: 2.2rem;
+				}
+			}
+		}
+		> .about-desc {
+			margin: 2rem 0;
+			font-size: .85rem;
+			max-width: 75%;
+			line-height: 200%;
+			font-weight: 300;
+		}
+		> .know-more {
+			margin: 0;
+			text-transform: uppercase;
+			font-size: .7rem;
+			font-weight: 700;
+			color: $dark-red;
+			display: flex;
+			align-items: center;
+			max-width: 180px;
+			@include transition(all, 0.5s, ease-in-out);
+			img {
+				width: 36px;
+				height: 36px;
+				margin: 0 0 0 .5rem;
+				@include transition(all, 0.5s, ease-in-out);
+			}
+			&:hover {
+				font-size: 1rem;
+				img {
+					margin: 0 0 0 1rem;
+				}
+			}
+		}
+	}
+	.login-wrapper {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+}
+@media screen and (max-width: 992px) {
+	.login-container {
+		.login-about {
+			display: none;
+		}
+	}
+}
+.login-screen {
+	position: relative;
+	background: $white;
+	border: 1px solid $border-bg;
+	@include roundedCorners(20);
+	box-shadow: 0 30px 15px -20px rgba(0, 0, 0, 0.2);
+	min-width: 320px;
+	max-width: 320px;
+	.login-logo {
+		margin: 0 0 1rem 0;
+		display: flex;
+		z-index: 100;
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	.login-body {
+		padding: 1.5rem 1.5rem 0 1.5rem;
+		.field-wrapper {
+			input {
+				border: 1px solid darken($white, 20%);
+				&:hover {
+					border: 1px solid darken($white, 30%);
+				}
+				&:focus {
+					outline-color: darken($white, 30%);
+				}
+			}
+			.field-placeholder {
+				color: darken($white, 40%);
+			}
+		}
+	}
+	.login-footer {
+		border-top: 1px solid $border-bg;
+		padding: 1rem 1.5rem 1rem 1.5rem;
+	}
+	// Actions
+	.actions {
+		display: flex;
+		margin-bottom: 1rem;
+		justify-content: flex-end;
+    	align-items: center;
+		a {
+			color: lighten($black, 60%);
+			font-size: .7rem;
+			line-height: 200%;
+			border-bottom: 1px dashed !important;
+			margin-right: auto;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.additional-link {
+		text-decoration: none;
+		margin: 0 auto;
+		display: inline-block;
+		color: lighten($black, 60%);
+		font-size: .7rem;
+		a {
+			margin-left: 5px;
+			display: inline-block;
+		}
+	}
+	h6 {
+		font-size: .875rem;
+		margin-bottom: 2rem;
+		line-height: 160%;
+		font-weight: 300;
+	}
+}
+
+
+/******** 7.2 Login/Signup Screen Carousel ********/
+.carousel-login {
+	.carousel-indicators li {
+		width: 10px;
+		background-color: $red;
+	}
+	.carousel-quotes {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		min-height: 250px;
+		width: 50%;
+		margin: 20px auto;
+		p {
+			font-size: 1rem;
+			font-weight: 300;
+			line-height: 210%;
+		}
+	}
+	.carousel-control-next-icon,
+	.carousel-control-prev-icon {
+		background-color: lighten($red, 30%);
+		@include roundedCorners(10);
+		background-size: 50%;
+		padding: 20px;		
+	}
+}
+
+
+/******** 7.3 Error Screen #1 ********/
+.error-screen {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	color: $white;
+	height: 100%;
+	h1 {
+		font-family: Rubik Mono One;
+		font-size: 15rem;
+		margin: 0;
+		line-height: 100%;
+	}
+	h5 {
+		margin-bottom: 2rem;
+		line-height: 180%;
+		font-weight: 300;
+	}
+	.btn {
+		padding: .7rem 1.8rem;
+		@include roundedCorners(50);
+		color: $white;
+		border: 1px solid $white;
+		&:hover {
+			color: $secondary-color;
+			background: $white;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.error-screen {
+		h1 {
+			font-size: 8rem;
+		}
+	}
+}
+
+
+/******** 7.4 Error Screen #2 Animations ********/
+
+/******** Stars Blink Animation ********/
+@-webkit-keyframes stars-blink {
+	10% {
+		opacity: 0.3;
+	}
+	30% {
+		opacity: 0.7;
+	}
+	70% {
+		opacity: 0.5;
+	}
+	90% {
+		opacity: 0.8;
+	}
+}
+@keyframes stars-blink {
+	10% {
+		opacity: 0.3;
+	}
+	30% {
+		opacity: 0.7;
+	}
+	70% {
+		opacity: 0.5;
+	}
+	90% {
+		opacity: 0.8;
+	}
+}
+
+/******** Earth Rotate Animation ********/
+@-webkit-keyframes earth-spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes earth-spin {
+	100% {
+		-webkit-transform: rotate(360deg); transform:rotate(360deg);
+	}
+}
+
+/******** Rocket Launch Animation ********/
+@-webkit-keyframes rocket-launch {
+	100% {
+		-webkit-transform: translate(1250px, -1900px);
+	}
+}
+@keyframes rocket-launch {
+	100% {
+		transform: translate(1250px, -1900px);
+	}
+}
+
+/******** Astronaut Animation ********/
+@-webkit-keyframes astronaut-movement {
+	100% {
+		-moz-transform: translate(-120px, -120px);
+	}
+}
+@keyframes astronaut-movement {
+	100% {
+		-webkit-transform: translate(-120px, -120px);
+	}
+}
+@-webkit-keyframes astronaut-rotate {
+	100% {
+		-moz-transform: rotate(-900deg);
+	}
+}
+@keyframes astronaut-rotate {
+	100% {
+		-webkit-transform: rotate(-900deg);
+	}
+}
+
+
+/******** 7.5 Login Screen 2 ********/
+.error-screen2 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: radial-gradient(at 70% 100%, darken($primary-color, 15%), $primary-color);
+	color: $white;
+	height: 100vh;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: url(../img/error-screen/stars.svg) repeat;
+		animation: stars-blink 3s linear infinite;
+		background-size: 55%;
+	}
+	.earth {
+		position: absolute;
+		top: 25%;
+		left: 10%;
+		-webkit-animation: earth-spin 150s linear infinite;
+		-moz-animation: earth-spin 150s linear infinite;
+		animation: earth-spin 150s linear infinite;
+		@include roundedCorners(100);
+		width: 110px;
+		height: 110px;
+	}
+	.moon {
+		position: absolute;
+		top: 10%;
+		left: 29%;
+		box-shadow: 0 0 80px $white;
+		@include roundedCorners(100);
+		width: 60px;
+		height: 60px;
+	}
+	.rocket {
+		position: absolute;
+		top: 80%;
+		left: 5%;
+		animation: rocket-launch 200s linear infinite;
+		width: 40px;
+		height: 40px;
+	}
+	.astronaut-container {
+		position: absolute;
+		top: 50%;
+		right: 20%;
+		will-change: transform;
+		animation: astronaut-movement 75s infinite linear both alternate;
+		.astronaut {
+			animation: astronaut-rotate 240s infinite linear both alternate;
+			width: 120px;
+		}
+	}
+	.contents {
+		text-align: center;
+		z-index: 1000;
+		h1 {
+			font-family: Rubik Mono One;
+			font-size: 12rem;
+			margin: 0;
+			line-height: 100%;
+		}
+		h5 {
+			margin-bottom: 2rem;
+			line-height: 180%;
+			font-weight: 300;
+		}
+		.btn {
+			padding: .7rem 1.8rem;
+			@include roundedCorners(50);
+			color: $white;
+			border: 1px solid $white;
+			&:hover {
+				color: $secondary-color;
+				background: $white;
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.error-screen2 {
+		.earth {
+			top: 15%;
+		}
+		.moon {
+			position: absolute;
+			top: 5%;
+			left: 15%;
+		}
+		.astronaut-container {
+			top: 80%;
+    		right: 15%;
+		}
+		.contents {
+			h1 {
+				font-size: 5rem;
+			}
+		}
+	}
+}
+
+
+/******** 7.6 Subscribe Screen ********/
+.subscribe-screen {
+	text-align: center;
+	@include roundedCorners(3);
+	color: $font-color;
+	background: $white;
+	min-width: 320px;
+	max-width: 320px;
+	margin: auto;
+	.subscribe-header {
+		@include roundedCornersAll(3px, 3px, 0, 0);
+		padding: 2rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $primary-color;
+		margin-bottom: 2.5rem;
+		overflow: hidden;
+		position: relative;
+		&:before {
+			content: '';
+			background: url(../img/lines-bg.svg) no-repeat;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: absolute;
+			left: 0px;
+			bottom: -10px;
+			width: 420px;
+			height: 130px;
+			opacity: 0.4;
+		}
+		.subscribe-icon {
+			width: 80px;
+			height: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include roundedCorners(50);
+			background-color: $white;
+			z-index: 1000;
+			i {
+				font-size: 1.8rem;
+				color: $primary-color;
+				text-shadow: none;
+			}
+		}
+	}	
+	.subscribe-body {
+		padding: 0rem 1.5rem 2rem 1.5rem;
+		h1 {
+			font-size: 1.8rem;
+			margin: 0 0 2rem 0;
+			line-height: 100%;
+			color: $primary-color;
+		}
+		p {
+			margin-bottom: 2rem;
+			line-height: 180%;
+			font-weight: 300;
+		}
+	}
+}
+
+
+/******** 7.7 Maintenance Screen ********/
+.maintenance-message {
+	color: $white;
+	display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+	h1 {
+		font-size: 4rem;
+		margin: 0 0 1rem 0;
+		line-height: 100%;
+		font-weight: 700;
+	}
+	h4 {
+		font-size: 2rem;
+		margin: 0 0 1rem 0;
+		line-height: 100%;
+	}
+	p {
+		font-size: .85rem;
+		margin: 0;
+		line-height: 180%;
+		font-weight: 300;
+	}
+	.btn {
+		padding: .7rem 1.8rem;
+		@include roundedCorners(50);
+		color: $white;
+		border: 1px solid $white;
+		&:hover {
+			color: $secondary-color;
+			background: $white;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.maintenance-message {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 150px;
+		p {
+			text-align: center;
+		}
+	}
+}
+
+
+
+/************************************************
+	************************************************
+				8. Pages/Apps CSS
+	************************************************
+************************************************/
+
+/******** 8.1 Documents App ********/
+.doc-block {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem 1.5rem;
+	@include roundedCorners(3);
+	background: $lighter-bg;
+	margin: 0 0 1rem 0;
+	.doc-icon {
+		width: 100px;
+		height: 100px;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include roundedCorners(100);
+		margin: 0 0 1rem 0;
+		background: $white;
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	.doc-title {
+		font-size: .9rem;
+		font-weight: 600;
+		margin: 0 0 1rem 0;
+	}
+}
+
+
+/******** 8.2 Contacts App ********/
+figure.user-card {
+	background: $lighter-bg;
+	padding: 2rem 1rem;
+	@include roundedCorners(3);
+	text-align: center;
+	position: relative;
+	a.edit-card {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		width: 36px;
+		height: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include roundedCorners(30);
+		background: $white;
+		margin: 0 0 0 5px;
+		i {
+			font-size: 1rem;
+			color: $primary-color;
+		}
+		&:hover {
+			background: $primary-color;
+			border: 1px solid $primary-color;
+			opacity: 1;
+			i {
+				color: $white;
+			}
+		}
+	}
+	.profile {
+		@include roundedCorners(50);
+		max-width: 72px;
+		margin-bottom: 20px;
+	}
+	h5 {
+		margin: 0 0 1rem 0;
+		font-size: .9rem;
+	}
+	.list-group {
+		margin: 0;
+		background: transparent;
+		.list-group-item {
+			background: rgba(255, 255, 255, 0.5);
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+
+/******** 8.3 Timeline App ********/
+.timeline {
+	position: relative;
+	padding: 10px;
+	margin: 0 auto;
+	overflow: hidden;
+	color: $font-color-light;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -1px;
+		border-right: 2px dashed $border-bg;
+		height: 100%;
+		display: block;
+	}
+}
+.timeline-row {
+	padding-left: 50%;
+	position: relative;
+	margin-bottom: 30px;
+	.timeline-time {
+		position: absolute;
+		right: 50%;
+		top: 31px;
+		text-align: right;
+		margin-right: 20px;
+		font-size: 1.5rem;
+		small {
+			display: block;
+			font-size: .75rem;
+		}
+	}
+	.timeline-content {
+		position: relative;
+		padding: 20px 30px;
+		@include roundedCorners(10);
+		&:after {
+			content: "";
+			position: absolute;
+			top: 20px;
+			height: 3px;
+			width: 40px;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 20px;
+			right: -50px;
+			width: 20px;
+			height: 20px;
+			@include roundedCorners(100);
+			z-index: 100;
+			background: $white;
+			border: 2px dashed $border-bg;
+		}
+		h4 {
+			margin: 0 0 20px 0;
+			color: $primary-color;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			line-height: 150%;
+			font-weight: 400;
+		}
+		p {
+			margin-bottom: 30px;
+			line-height: 150%;
+		}
+		i {
+			font-size: 2rem;
+			line-height: 100%;
+			padding: 10px;
+			border: 2px solid $primary-color;
+			color: $primary-color;
+			@include roundedCorners(100);
+			margin-bottom: 10px;
+			display: inline-block;
+		}
+		.thumbs {
+			margin-bottom: 20px;
+			img {
+				margin-bottom: 10px;
+			}
+		}
+		.badge {
+			background: $primary-color;
+			@include roundedCorners(2);
+			color: $white;
+		}
+	}
+	&:nth-child(even) {
+		.timeline-content {
+			background: $light-bg;
+			margin-left: 40px;
+			text-align: left;
+			&:after {
+				left: -39px;
+				border-right: 18px solid $light-bg;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+			&:before {
+				left: -50px;
+				right: initial;
+			}
+		}
+	}
+	&:nth-child(odd) {
+		padding-left: 0;
+		padding-right: 50%;
+		.timeline-time {
+			right: auto;
+			left: 50%;
+			text-align: left;
+			margin-right: 0;
+			margin-left: 20px;
+		}
+		.timeline-content {
+			background: $light-bg;
+			margin-right: 40px;
+			margin-left: 0;
+			text-align: right;
+			&:after {
+				right: -39px;
+				border-left: 18px solid $light-bg;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.timeline {
+		padding: 15px 10px;
+		&:after {
+			left: 28px;
+		}
+		.timeline-row {
+			padding-left: 0;
+			margin-bottom: 16px;
+			.timeline-time {
+				position: relative;
+				right: auto;
+				top: 0;
+				text-align: left;
+				margin: 0 0 6px 56px;
+				strong {
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+			.timeline-icon {
+				top: 52px;
+				left: -2px;
+				margin-left: 0;
+			}
+			.timeline-content {
+				padding: 15px;
+				margin-left: 56px;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+				position: relative;
+				&:after {
+					right: auto;
+					left: -39px;
+					top: 32px;
+				}
+			}
+			&:nth-child(odd) {
+				padding-right: 0;
+				.timeline-time {
+					position: relative;
+					right: auto;
+					left: auto;
+					top: 0;
+					text-align: left;
+					margin: 0 0 6px 56px;
+				}
+				.timeline-content {
+					margin-right: 0;
+					margin-left: 55px;
+					&:after {
+						right: auto;
+						left: -39px;
+						top: 32px;
+						border-right: 18px solid $primary-color;
+						border-left: inherit;
+					}
+				}
+			}
+		}
+		&.animated .timeline-row {
+			&:nth-child(odd) .timeline-content {
+				left: 20px;
+			}
+			&.active:nth-child(odd) .timeline-content {
+				left: 0;
+			}
+		}
+	}
+}
+
+
+/******** 8.4 Chat App ********/
+.empty-chat-screen {
+	background: $white;
+	z-index: 100;
+	@include roundedCornersAll(0, 10px, 10px, 0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0 auto;
+	height: calc(100vh - 160px);
+	img.my-avatar {
+		max-width: 90px;
+		height: 90px;
+		@include roundedCorners(50);
+		margin: 0 0 1rem 0;
+	}
+	img.empty-chat-display {
+		max-width: 210px;
+		max-height: 210px;
+		margin: 0 0 1.5rem 0;
+	}
+	h5 {
+		font-size: .8rem;
+		font-weight: 400;
+	}
+	h6 {
+		font-size: .9rem;
+		color: $primary-color;
+		margin: 0 0 1rem 0;
+		font-weight: 400;
+	}
+	p {
+		font-size: .825rem;
+		color: $font-color-light;
+		margin: 0;
+		text-align: center;
+		max-width: 75%;
+	}
+}
+.search-chat-container {
+	margin: 0 0 .5rem 0;
+	padding: 0 20px;
+	.input-group {
+		position: relative;
+		&:after {
+			position: absolute;
+			top: 10px;
+			left: 15px;
+			content: '';
+			padding: .375rem 0 .375rem .75rem;
+			background: url(../img/icon-search.svg);
+			background-size: 100%;
+			width: 21px;
+			height: 21px;
+			z-index: 100;
+		}
+	}
+	.form-control {
+		border: 2px solid $form-border;
+		@include roundedCorners(5);
+		background: $white;
+		height: 40px;
+		padding: .375rem 0 .375rem 3rem;			
+		&:focus, &:hover {
+			border: 2px solid $primary-color;
+			@include transition(all, 0.5s, ease-in-out);
+		}
+	}
+}
+.chat-wrapper {
+	background: $white;
+	@include roundedCorners(4);
+	display: flex;
+}
+.chat-users-container {
+	border-right: 1px solid lighten($border-bg, 3%);
+	width: 330px;
+	padding: 20px 0;
+	.users-container {
+		ul.users-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;			
+			li {
+				border-bottom: 1px solid lighten($border-bg, 3%);
+				a {
+					padding: 15px 20px;
+					display: flex;
+					flex-direction: row;
+					> .chat-avatar {
+						margin: 0 1rem 0 0;
+						position: relative;
+						width: 46px;
+						height: 46px;
+						.status {
+							position: absolute;
+							bottom: 0px;
+							right: 0px;
+							@include roundedCorners(30);
+							width: 14px;
+							height: 14px;
+							border: 2px solid $white;
+							&.online {
+								background: $green;
+							}
+							&.busy {
+								background: $red;
+							}
+							&.away {
+								background: $yellow;
+							}
+							&.offline {
+								background: $dark-bg;
+							}
+						}
+						img {
+							@include roundedCorners(50);
+							width: 46px;
+							height: 46px;
+						}
+						.bg-avatar {
+							width: 46px;
+							height: 46px;
+							@include roundedCorners(50);
+							font-size: 14px;
+							font-weight: 600;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							&.blue {
+								background: $light-blue;
+								color: $dark-blue;
+							}
+							&.yellow {
+								background: $light-yellow;
+								color: $dark-yellow;
+							}
+							&.red {
+								background: $light-red;
+								color: $dark-red;
+							}
+							&.green {
+								background: $light-green;
+								color: $dark-green;
+							}
+							&.pink {
+								background: $light-pink;
+								color: $dark-pink;
+							}
+							&.orange {
+								background: $light-orange;
+								color: $dark-orange;
+							}
+							&.violet {
+								background: $light-violet;
+								color: $dark-violet;
+							}
+							&.brown {
+								background: $light-brown;
+								color: $dark-brown;
+							}
+						}
+					}
+					.users-list-body {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						flex: 1;
+						.chat-msg {
+							flex: 1;
+							max-width: 210px;
+							> h6 {
+								margin: 0;
+								font-weight: 600;
+								font-size: .775rem;
+								color: $font-color-light;
+							}
+							> p {
+								margin: 0;
+								line-height: 200%;
+								font-size: .7rem;
+								color: $font-color-light;
+							}
+						}
+						.chat-time {
+							color: $font-color-light;
+							font-size: .65rem;
+							display: flex;
+							align-items: flex-end;
+							flex-direction: column;
+							> .time {
+								margin: 0;
+							}
+							> .count {
+								@include roundedCorners(50);
+								width: 16px;
+								height: 16px;
+								background: $blue;
+								color: $white;
+								font-size: .6rem;
+								font-weight: 600;
+								margin: 0 0 .2rem 0;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
+						}				
+					}
+					&:hover {
+						@include transition(all, 0.5s, ease);
+						color: $font-color;
+						background: $light-bg;
+					}					
+				}
+				&.active-chat {
+					color: $font-color;
+					background: $light-color;
+					a {
+						&:hover {
+							color: $font-color;
+							background: $light-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.chat-content-wrapper {
+	padding: 0;
+	flex: 1;
+}
+.active-user-chatting {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 1rem 1rem;
+	border-bottom: 1px solid $border-bg;	
+	.active-user-info {
+		display: flex;
+		align-items: center;
+		img.avatar {
+			margin: 0 10px 0 0;
+			width: 40px;
+			height: 40px;
+			@include roundedCorners(30);
+		}
+		.bg-chat-avatar {
+			width: 50px;
+			height: 50px;
+			@include roundedCorners(50);
+			font-size: 14px;
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 15px 0 0;
+			&.blue {
+				background: $light-blue;
+				color: $dark-blue;
+			}
+			&.yellow {
+				background: $light-yellow;
+				color: $dark-yellow;
+			}
+			&.red {
+				background: $light-red;
+				color: $dark-red;
+			}
+			&.green {
+				background: $light-green;
+				color: $dark-green;
+			}
+			&.pink {
+				background: $light-pink;
+				color: $dark-pink;
+			}
+			&.orange {
+				background: $light-orange;
+				color: $dark-orange;
+			}
+			&.violet {
+				background: $light-violet;
+				color: $dark-violet;
+			}
+			&.brown {
+				background: $light-brown;
+				color: $dark-brown;
+			}
+		}
+		> .avatar-info {
+			h5 {
+				font-size: .8rem;
+				margin: 0;
+				line-height: 160%;
+			}
+			.typing {
+				color: $font-color-light;
+				font-size: .725rem;
+			}
+		}
+	}
+	.chat-actions {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		a {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include roundedCorners(50);
+			box-shadow: 5px 5px 10px $card-shadow;
+			margin: 0 0 0 10px;
+			i {
+				font-size: .8rem;
+			}
+			&:hover {
+				box-shadow: 5px 5px 20px darken($card-shadow, 10%);
+			}
+		}
+	}
+}
+.chat-container {
+	position: relative;
+	padding: 1.5rem .2rem;
+	.chat-box {
+		padding: 0 .8rem;
+		// Chat conversation
+		li {
+			&.chat-left, &.chat-right {
+				display: flex;
+				margin-bottom: 40px;
+			}
+			.chat-avatar {
+				margin-right: 20px;
+				img {
+					width: 48px;
+					height: 48px;
+					@include roundedCorners(30);
+				}
+			}
+			.chat-hour {
+				padding: 0;
+				font-size: .75rem;
+				margin: 5px 0 0 0;
+				color: $font-color-light;
+				&.read {
+					> span {
+						color: $green;
+					}	
+				}
+				> span {
+					font-size: 16px;
+					color: $font-color-light;
+				}
+			}
+			.chat-name {
+				font-size: .75rem;
+				color: $font-color-light;
+				text-align: center;
+				font-weight: 600;
+			}
+			.chat-text-wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				.chat-text {
+					padding: .7rem 1rem;					
+					background: $primary-color-light;
+					@include roundedCorners(3);
+					line-height: 150%;
+					align-self: flex-start;
+					position: relative;
+					font-size: .8rem;
+					margin: 0 0 5px 0;
+					p {
+						font-weight: 400;
+						line-height: 190%;
+					}
+					&:first-child {
+						&:before {
+							content: '';
+							position: absolute;
+							width: 0;
+							height: 0;
+							top: 14px;
+							left: -16px;
+							border: 8px solid;
+							border-color: transparent $primary-color-light $primary-color-light transparent;
+						}
+					}
+					.chat-img-thumbnail {
+						position: relative;
+						margin: 5px 0;
+						img {
+							max-width: 210px;
+						}
+						a.download {
+							position: absolute;
+							bottom: 10px;
+							left: 10px;
+							display: none;							
+							> img {
+								width: 18px;
+								height: 18px;
+							}
+						}
+						&:hover {
+							.download {
+								width: 36px;
+								height: 36px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								background: rgba(255, 255, 255, 0.3);
+								@include roundedCorners(50);
+								i {
+									color: $white;
+									text-shadow: none;
+								}
+							}
+						}
+					}
+				}
+				.chat-files-group {
+					display: flex;
+					flex-direction: row;
+					.chat-file {
+						margin: 0 3px;
+						width: 48px;
+						height: 48px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: $white;
+						@include roundedCorners(3);
+						img {
+							width: 24px;
+							height: 24px;
+							@include roundedCorners(0);
+						}
+					}
+				}
+				a.shared-files {
+					display: flex;
+					align-items: center;
+					background: $white;
+					@include roundedCorners(3);
+					padding: 7px 15px;
+					.attached-folder {
+						margin-right: 10px;
+						img {
+							width: 24px;
+							height: 24px;
+							@include roundedCorners(0);
+						}
+					}
+					.attached-link {
+						font-size: .75rem;
+						font-weight: 600;
+					}
+					&:hover {
+						color: $black;
+					}
+				}
+			}			
+			&.chat-right {
+				justify-content: flex-end;
+				> .chat-avatar {
+					margin-left: 20px;
+					margin-right: 0;
+				}
+				.chat-text-wrapper {
+					> .chat-text {
+						text-align: right;
+						background: $light-color;
+						align-self: flex-end;
+						&:before {
+							right: -16px;
+							border-color: transparent transparent $light-color $light-color;
+							left: inherit;
+						}
+					}
+				}
+			}
+			&.divider {
+				position: relative;
+				display: flex;
+				align-items: center;
+				margin: 2rem 0;
+				color: $font-color-light;
+				font-size: .65rem;
+				font-weight: 600;
+				letter-spacing: .5px;
+				text-transform: uppercase;
+				&:before {
+					content: '';
+					display: block;
+					flex: 1;
+					height: 1px;
+					background-color: $border-bg;
+					margin-right: 10px;
+				}
+				&:after {
+					content: '';
+					display: block;
+					flex: 1;
+					height: 1px;
+					background-color: $border-bg;
+					margin-left: 10px;
+				}
+			}
+			&:last-child {
+				&.chat-left, &.chat-right {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+.chat-form {
+	margin: 0;
+	padding: 1.5rem 1rem .5rem 1rem;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	.form-group {
+		flex: 1;
+		margin: 0;
+		textarea {
+			height: 40px;
+			font-size: .75rem;
+		}		
+	}
+	.chat-form-actions {
+		display: flex;
+		margin: 0 10px;
+		a.action-icon {
+			position: relative;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: 18px;
+				height: 18px;
+			}
+			.action-icon-tooltip {
+				padding: 3px 12px;
+				background: $black;
+				color: $white;
+				display: none;
+				position: absolute;
+				top: -25px;
+				font-size: .7rem;					
+				z-index: 100;
+				@include roundedCorners(2);
+				&:before {
+					content: '';
+					position: absolute;
+					left: 50%;
+					bottom: -5px;
+					margin-left: -3px;
+					width: 0;
+					height: 0;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-top: 6px solid $black;
+				}
+			}
+			.action-icon-popup {
+				padding: 5px;
+				margin-bottom: 10px;
+				background: $white;
+				border: 1px solid $border-bg;
+				display: none;
+				position: absolute;
+				bottom: 32px;
+				right: 0;
+				width: 240px;
+				z-index: 100;
+				@include roundedCorners(5);
+				&:before {
+					content: '';
+					position: absolute;
+					right: 13px;
+					bottom: -6px;
+					width: 12px;
+					height: 12px;
+					transform: rotate(45deg);
+					background: $white;
+					border-bottom: 1px solid $border-bg;
+					border-right: 1px solid $border-bg;
+				}
+				.emoji-list {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					flex-wrap: wrap;
+					span {
+						font-size: 1.2rem;
+						padding: 3px;
+						margin: 1px;
+						width: 30px;
+						height: 30px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						&:hover {
+							background: $light-bg;
+							@include roundedCorners(3);
+						}
+					}
+				}
+			}
+			&:hover {
+				background: $light-blue;
+				@include roundedCorners(4);
+				.action-icon-tooltip {
+					display: block;
+				}
+				.action-icon-popup {
+					display: flex;
+				}
+			}
+		}
+	}
+	.btn {
+		display: flex;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 21px;
+			height: 21px;
+		}
+	}
+}
+.call-container {
+	margin: 2rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.current-user {
+		margin: 0 0 1.5rem 0;
+		img {
+			width: 90px;
+			height: 90px;
+			@include roundedCorners(100);
+		}
+	}
+	h5.calling-user-name {
+		font-weight: 400;
+		margin: 0 0 2rem 0;
+		.calling {
+			color: $blue;
+		}
+	}
+	.calling-btns {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		.btn {
+			width: 50px;
+			height: 50px;
+			margin: .3rem .5rem;
+			@include roundedCorners(30);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include roundedCorners(50);
+			i {
+				font-size: 1.2rem;
+				margin: 0;
+			}
+		}
+	}
+}
+@media (max-width: 576px) {
+	.search-chat-container {
+		display: none;
+	}
+	.empty-chat-screen {
+		img.empty-chat-display {
+			max-width: 120px;
+			max-height: 120px;
+		}
+	}
+	.chat-users-container {
+		width: auto;
+		padding-top: 30px;
+		.users-container {
+			ul.users-list {
+				li {
+					a {
+						padding: 15px;
+						> .chat-avatar {
+							margin: 0;
+						}
+						.users-list-body {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.chat-container {
+		.chat-box {
+			li {
+				.chat-text-wrapper {
+					.chat-text {
+						.chat-img-thumbnail {
+							img {
+								max-width: 100px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.chat-form {
+		.chat-form-actions {
+			display: none;
+		}
+		.btn {
+			margin: 0 0 0 5px;
+		}
+	}
+}
+@media (max-width: 420px) {
+	.empty-chat-screen {
+		height: calc(100vh - 150px);
+	}
+	.chat-users-container {
+		.users-container {
+			ul.users-list {
+				li {
+					a {
+						padding: 10px;
+						> .chat-avatar {
+							width: 36px;
+    						height: 36px;
+							img {
+								width: 36px;
+    							height: 36px;
+							}
+							.bg-avatar {
+								width: 36px;
+								height: 36px;
+								font-size: 11px;
+							}
+						}
+					}
+				}
+			}	
+		}
+	}
+	.active-user-chatting {
+		padding: .5rem 1rem;
+		.active-user-info {
+			> .avatar-info {
+				display: none;
+			}
+			.bg-chat-avatar {
+				width: 36px;
+				height: 36px;
+				font-size: 11px;
+			}
+		}
+	}
+	.chat-container {
+		padding: 0.5rem .2rem;
+		.chat-box {
+			padding: 0 .5rem;
+			// Chat conversation
+			li {
+				.chat-avatar {
+					margin-right: 15px;
+					img {
+						width: 36px;
+						height: 36px;
+					}
+				}
+				.chat-text-wrapper {
+					.chat-text {
+						padding: .7rem;
+						max-width: 130px;
+						.chat-img-thumbnail {
+							img {
+								max-width: 60px;
+							}
+
+						}
+					}
+				}
+			}
+		}
+		.slimScrollDiv {
+			height: calc(100vh - 280px) !important;
+		}
+		.chatContainerScroll {
+			height: calc(100vh - 280px) !important;
+		}
+	}
+	.chat-form {
+		padding: 0.5rem 1rem .5rem 1rem;
+	}
+}
+
+
+/******** 8.5 Tasks App ********/
+.tasks-section {
+	background: $white;
+	@include roundedCorners(4);
+	display: flex;
+}
+
+
+/******** 8.6 Labels Container ********/
+.labels-container {
+	position: relative;
+	border-right: 1px solid lighten($border-bg, 3%);
+	width: 160px;
+	padding: 20px 0;
+	display: flex;	
+	-ms-flex-direction: column;
+	flex-direction: column;	
+
+	// Filters
+	.filters-block {
+		margin: 1rem 0 2rem 0;
+		h5 {
+			font-size: .8rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin: 0 0 .8rem 0;
+			padding: 0 1.5rem;
+		}
+		.filters {
+			a {
+				font-size: .75rem;
+				padding: .5rem 1.5rem;
+				color: $font-color-lighter;
+				display: flex;
+				align-items: center;
+				i {
+					font-size: 1rem;
+					margin: 0 .5rem 0 0;
+					color: $font-color-lighter;
+				}
+				&:hover {
+					background: $light-color;
+					color: $primary-color;
+				}
+				&.active {
+					background: $light-color;
+					color: $font-color;
+				}
+			}
+		}
+	}
+
+	// Tags
+	.tags-block {
+		margin: 1rem 0 1rem 0;
+		h5 {
+			font-size: .8rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin: 0 0 .8rem 0;
+			padding: 0 1.5rem;
+		}
+		.tags {
+			a {
+				font-size: .75rem;
+				padding: .3rem 1.5rem;
+				color: $font-color-lighter;
+				display: flex;
+				align-items: center;
+				i {
+					font-size: 1rem;
+					margin: 0 .5rem 0 0;
+				}
+				&:hover {
+					background: $light-color;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.labels-container {
+		width: 110px;
+		// Filters
+		.filters-block {
+			h5 {
+				padding: 0 .75rem;
+			}
+			.filters {
+				a {
+					padding: .5rem .75rem;
+				}
+			}
+		}
+
+		// Tags
+		.tags-block {
+			h5 {
+				padding: 0 .75rem;
+			}
+			.tags {
+				a {
+					padding: .5rem .75rem;
+				}
+			}
+		}
+	}
+}
+
+
+/******** 8.7 Tasks Container ********/
+.tasks-container {
+	position: relative;
+	padding: 0 0 1rem 0;
+	flex: 1;
+	.tasks-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		padding: .8rem 1.5rem;
+		border-bottom: 1px solid lighten($border-bg, 3%);
+		@include roundedCornersAll(0, 3px, 0, 0);
+		h3 {
+			margin: 0;
+			font-size: 1.2rem;
+			color: $primary-color;
+			span {
+				display: flex;
+				font-size: .725rem;
+				line-height: 220%;
+				font-weight: 400;
+				color: $font-color-lighter;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.tasks-container {
+		.tasks-header {
+			padding: 1rem 1rem;
+			h3 {
+				display: none;
+			}
+		}
+	}
+}
+
+
+/******** 8.8 Task List ********/
+.task-list {
+	position: relative;
+	padding: 0 .5rem;
+	.task-block {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		padding: 1.5rem 1rem;
+		border-bottom: 1px solid lighten($border-bg, 3%);
+		.task-checkbox {
+			margin: 0 2rem 0 0;
+			position: relative;
+			input[type="checkbox"] {
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				cursor: pointer;
+				&:focus {
+					outline: 0;
+				}
+				&:checked + .ripple-container {
+					.check-off {
+						border-color: $font-color;
+					}
+					.check-on {
+						-webkit-transform: scale(0.8);
+						-moz-transform: scale(0.8);
+						-ms-transform: scale(0.8);
+						-o-transform: scale(0.8);
+						transform: scale(0.8);
+						-webkit-transition: -webkit-transform 0.3s;
+						-moz-transition: -moz-transform 0.3s;
+						transition: transform 0.3s;
+						color: $font-color;
+						position: absolute;
+						left: 2px;
+						top: 2px;
+						i {
+							font-size: 1.3rem;
+							font-weight: 700;
+						}
+					}
+				}
+				+.ripple-container {
+					width: auto;
+					position: relative;
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					top: 0;
+					pointer-events: none;
+					&:before {
+						content: "";
+						position: absolute;
+						@include roundedCorners(2);
+						display: block;
+						height: auto;
+						left: 0;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						-webkit-transition: all 0.5s;
+						-moz-transition: all 0.5s;
+						transition: all 0.5s;
+					}
+					.check-off {
+						position: absolute;
+						width: 25px;
+						height: 25px;
+						left: 0;
+						top: 0;
+						@include roundedCorners(2);
+						border: 2px solid $border-bg;
+						transition: border-color ease 0.28s;
+					}
+					.check-on {
+						-webkit-transform: scale(0);
+						-moz-transform: scale(0);
+						-ms-transform: scale(0);
+						-o-transform: scale(0);
+						transform: scale(0);
+						-webkit-transition: all 0s;
+						-moz-transition: all 0s;
+						transition: all 0s;				
+					}
+				}
+			}
+		}
+		.task-details {
+			@include transition(all, 0.3s, ease-out);
+			opacity: 1;
+			flex: 1;
+			.task-name {
+				margin-bottom: .3rem;
+				font-size: .8rem;
+				font-weight: 600;
+			}
+			.task-desc {
+				margin-bottom: .7rem;
+				color: $font-color-light;
+				line-height: 180%;
+				font-size: .725rem;
+			}
+			.task-types {
+				margin: 0;
+			}
+		}
+		ul.task-actions {
+			width: 110px;
+			display: flex;
+			flex: 0 0 1%;
+			align-items: center;
+			justify-content: flex-end;
+			li {
+				> a {
+					width: 36px;
+					height: 36px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: $font-color-light;
+					@include roundedCorners(50);
+					i {
+						font-size: 1.4rem;
+					}
+					&:hover {
+						background: $light-bg;
+					}
+					&.important.active {
+						color: $red;
+					}
+					&.star.active {
+						color: $yellow;
+					}
+				}
+			}
+		}
+		&.task-checked {
+			background: $light-color;
+			.task-details {
+				opacity: 0.7;
+				text-decoration: line-through;
+			}
+			ul.task-actions {
+				opacity: 0.7;
+			}
+		}
+		.dropdown-menu {
+			background: $primary-color;
+			@include roundedCorners(2);
+			a {
+				padding: .3rem 1rem;
+				color: $white;
+				display: flex;
+				align-items: center;
+				i {
+					font-size: .9rem;
+					margin: 0 .5rem 0 0;
+					text-shadow: none;
+				}
+				&:hover {
+					background: darken($primary-color, 5%);
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.task-list {
+		.task-block {
+			align-items: flex-start;
+			flex-direction: column;
+			padding: 1rem 1rem;
+			.task-checkbox {
+				margin: 0 0 1rem 0;
+			}
+			.task-details {
+				.task-types {
+					.badge {
+						max-width: 60px;
+						overflow: hidden;
+						white-space: nowrap;
+						padding: .35rem .3rem;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/******** 8.9 Invoice Page ********/
+.invoice-container {
+	padding: 0;
+	.invoice-header {
+		.invoice-logo {
+			margin: .8rem 0 1rem 0;
+			display: inline-block;
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+		address {
+			font-size: .8rem;
+			color: $font-color-light;
+			margin: 0;
+			text-align: right;
+		}
+	}
+	.invoice-details {
+		display: flex;
+		margin: 1rem 0 .5rem 0;
+		padding: 1rem;
+		line-height: 180%;
+		background: $primary-color-light;
+		.invoice-num {
+			text-align: right;
+			margin-left: auto;
+			font-size: .8rem;
+		}
+	}
+
+	.invoice-body {
+		padding: 3rem 0;
+	}
+	.invoice-footer {
+		text-align: center;
+		font-size: .7rem;
+		span {
+			display: inline-block;
+			background: $primary-color-light;
+			padding: 3px 10px;
+			@include roundedCorners(30);
+		}
+	}
+}
+
+
+/******** 8.10 Pricing Plan ********/
+.pricing-plan {
+	margin: 0 0 1.5rem 0;
+	width: 100%;
+	position: relative;
+	background: $white;	
+	@include roundedCorners(3);
+	.pricing-header {		
+		padding: 20px 0;
+		text-align: center;
+		background: $primary-color;
+		@include roundedCornersAll(3px, 3px, 0px, 0px);
+		.pricing-title {
+			font-size: 1.2rem;
+			color: $white;
+			padding: 1rem 0;
+			text-transform: uppercase;
+			font-weight: 300;
+			margin: 0;
+			text-shadow: 0 30px 10px rgba(0, 0, 0, 0.15);
+		}
+		.pricing-cost {
+			color: $white;
+			padding: 1rem 0;
+			font-size: 2.5rem;
+			font-weight: 700;
+			text-shadow: 0 30px 10px rgba(0, 0, 0, 0.15);
+		}
+		.pricing-save {
+			color: $white;
+			padding: .8rem 0;
+			font-size: 1rem;
+			font-weight: 300;
+		}
+	}
+	.pricing-body {
+		border: 1px solid $border-bg;
+	}
+	.pricing-features {
+		padding: 20px 0;
+		margin: 0;
+		text-align: left;
+		li {
+			padding: 15px 15px 15px 40px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			position: relative;
+			line-height: 100%;
+			&:before {
+				position: absolute;
+				left: 15px;
+				top: 15px;
+				font-size: 1rem;
+				color: $black;
+				content: "\e9ec";
+				font-family: 'icomoon';
+			}
+		}
+	}
+	.pricing-footer {
+		@include roundedCornersAll(0, 0, 3px, 3px);
+		text-align: center;
+		padding: 1rem 0 2rem 0;
+	}
+}
+@media (max-width: 767px) {
+	.pricing-plan {
+		.pricing-header {
+			text-align: center;
+			i {
+				display: block;
+				float: none;
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}
+
+
+/******** 8.11 Search Results Page ********/
+.search-results-container {
+	background: $white;
+	padding: 2rem 1.5rem;
+	@include roundedCorners(3);
+	position: relative;
+	.search-results-header {
+		margin-bottom: 1.5rem;;
+		.search-results-title {
+			font-size: 1.5rem;
+			color: $primary-color;
+		}
+	}
+	.search-results-body {
+		padding: 1rem 0 0 0;		
+	}
+	.search-results-block {
+		margin: 0 0 1.5rem 0;
+		p.title {
+			font-size: .8rem;
+			color: $primary-color;
+			margin: 0 0 .3rem 0;
+			font-weight: 600;
+		}
+		a.link {
+			color: $font-color-light;
+			font-size: .75rem;
+			margin: 0 0 .3rem 0;
+			display: block;
+			font-weight: 600;
+		}		
+		p.desc {
+			font-size: .75rem;
+			margin: 0;
+			color: $font-color-lighter;
+		}
+	}
+}
+
+
+/******** 8.12 FAQ Page ********/
+.submit-request-card {
+	background: $white;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	> h5 {
+		margin: 0 0 1rem 0;
+	}
+	> p {
+		margin: 0;
+		color: $font-color-light;
+	}
+	> .btn {
+		white-space: nowrap;
+		min-width: 130px;
+	}
+}
+
+
+
+/************************************************
+	************************************************
+					9. Plugins
+	************************************************
+************************************************/
+
+/******** 9.1 Slim Scroll Bar ********/
+.slimScrollBar {
+	opacity: .3 !important;
+}
+.slimScrollDiv:hover {
+	.slimScrollBar {
+		@include roundedCorners(30);
+		opacity: .5 !important;
+	}
+}
+
+
+/******** 9.2 DropZone ********/
+#dropzone {
+	margin: 1rem 0;	
+}
+.dropzone {
+	border: 2px dashed $primary-color !important;
+	@include roundedCorners(3);
+	background: $white !important;
+	min-height: 250px !important;
+	.dz-message {
+		font-weight: 400;
+		.note {
+			font-size: 0.7rem;
+			display: block;
+			margin-top: 1rem;
+			color: $font-color-light !important;
+		}
+		.dz-button {
+			margin-top: 3rem;
+			background: transparent;
+			color: $font-color-light !important;
+			font-size: 1.3rem !important;
+		}
+	}
+}
+#dropzone-sm {
+	margin: 0;
+	.dropzone {
+		border: 1px dashed $primary-color !important;
+		@include roundedCorners(3);
+		background: $white !important;
+		min-height: 174px !important;
+		.dz-message {
+			font-weight: 400;
+			margin: 0;
+			.note {
+				font-size: 0.7rem;
+				display: block;
+				margin-top: 1rem;
+				color: $font-color-light !important;
+			}
+			.dz-button {
+				margin: 3rem 0 0 0;
+				background: transparent;
+				color: $font-color-light !important;
+				font-size: 1rem !important;
+			}
+		}
+	}
+}
+
+
+/******** 9.3 Credit Card ********/
+#creditCardType {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	.credit-card {
+		margin: 5px 5px 0 0;
+		display: inline-block;
+		img {
+			max-width: 36px;
+			filter: grayscale(100%);
+		}
+		&.highlight {
+			img {
+				filter: grayscale(10%);
+			}
+		}
+	}
+}
+
+
+/******** 9.4 jVector Maps ********/
+.jvectormap-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	touch-action: none;
+}  
+.jvectormap-tip {
+	position: absolute;
+	display: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	background: #000000;
+	color: #ffffff;
+	font-size: .75rem;
+	padding: 6px 12px;
+}
+@keyframes showHideDot {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.jvectormap-marker {
+	opacity: 0;
+	animation: showHideDot 1.5s ease-in-out infinite;
+}
+
+
+/******** 9.5 Hover Tabs Dummy ********/
+img.hover-tabs-img {
+	display: none;
+}
+@media screen and (min-width: 1140px) {
+	img.hover-tabs-img {
+		display: block;
+		position: fixed;
+		top: 150px;
+		left: 50px;
+		max-width: 480px;
+		z-index: 1000;
+	}
+}
+
+
+
+/************************************************
+	************************************************
+			10. Bootstrap Overwrite CSS
+	************************************************
+************************************************/
+
+/******** 10.1 Accordion ********/
+.accordion {
+	background: $white;
+	.accordion-button {
+		text-align: left;
+		font-size: .9rem;
+		&.collapsed {
+			border-bottom-width: 0;
+		}
+		&:not(.collapsed) {
+			color: $primary-color;
+			background-color: $primary-color-light;
+		}
+		&:focus {
+			box-shadow: none;
+		}
+	}
+	.accordion-collapse {
+		border-width: 0 1px;
+	}
+	.accordion-body {
+		p {
+			line-height: 180%;
+			color: $font-color-light;
+			font-size: .775rem;
+		}
+	}
+}
+
+
+/******** 10.2 Cards ********/
+.card {
+	background: $white;
+	border: 0;
+	box-shadow: none;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	.card-header {
+		background: transparent;
+		border: 0;
+		padding: 1.25rem 1.25rem 0 1.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.card-title {
+			margin: 0;
+			font-size: .9rem;
+			font-weight: 600;
+			line-height: 100%;
+		}
+	}
+	.card-header-lg {
+		padding: 1rem 1.25rem 1rem 1.25rem;
+		border-bottom: 1px solid $light-bg;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		h4 {
+			margin: 0;
+			font-size: 1rem;
+			font-weight: 400;
+		}
+	}
+	.card-body {
+		padding: 1.25rem 1.25rem;
+		position: relative;
+		.card-title {
+			margin-bottom: .7rem;
+			font-size: .85rem;
+			font-weight: 600;
+			line-height: 100%;
+		}
+	}
+	.card-footer {
+		background: transparent;
+		border-top: 1px solid $border-bg;
+		padding: 1rem 1.25rem;
+	}
+	.card-img-bottom {
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+	.card-img-top {
+		border-top-right-radius: 4px;
+		border-top-left-radius: 4px;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+
+/******** 10.3 Alerts ********/
+.alert {
+	margin-bottom: .5rem;
+	@include roundedCorners(2);
+	border: 0;
+	padding: .75rem 1rem;
+	font-size: .8rem;
+	color: $white;
+	.alert-link {
+		color: $white;
+		font-weight: 600;
+		margin-left: 5px;
+	}
+	&.alert-primary {
+		color: $white;
+		background: $primary-color;
+		hr {
+			border-top-color: lighten($primary-color, 5%);
+		}
+	}
+	&.alert-secondary {
+		color: $white;
+		background: $secondary-color;
+		hr {
+			border-top-color: lighten($secondary-color, 5%);
+		}
+	}
+	&.alert-success {
+		background: $green;
+		hr {
+			border-top-color: lighten($green, 5%);
+		}
+	}
+	&.alert-danger {
+		background: $red;
+		hr {
+			border-top-color: lighten($red, 5%);
+		}
+	}
+	&.alert-info {
+		background: $blue;
+		hr {
+			border-top-color: lighten($blue, 5%);
+		}
+	}
+	&.alert-warning {
+		background: $yellow;
+		hr {
+			border-top-color: lighten($yellow, 5%);
+		}
+	}
+	&.alert-light {
+		background: $light-color;
+		color: $font-color;
+		hr {
+			border-top-color: darken($light-color, 5%);
+		}
+	}
+	i {
+		font-size: 1.1rem;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	.alert-link {
+		text-decoration: underline;
+		font-weight: 400;
+	}
+	.alert-heading {
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	&.alert-dismissible .btn-close {
+		padding: .9rem;
+	}
+}
+
+
+/******** 10.4 Badges ********/
+.badge {
+	@include roundedCorners(2);
+	font-weight: 600;
+	padding: .25rem .5rem;
+	line-height: 100%;
+	vertical-align: middle;
+}
+
+
+/******** 10.5 Breadcrumbs ********/
+.breadcrumb {
+	background: transparent;
+	padding: 0;
+	font-size: .725rem;
+	.breadcrumb-item {		
+		color: $font-color-lighter;
+		font-weight: 400;
+		& + .breadcrumb-item::before {
+			color: $font-color-lighter;
+			font-family: 'icomoon' !important;
+			content: '\e9f1';
+			font-size: 1rem;
+			line-height: 1;
+			vertical-align: middle;
+		}
+		a {
+			color: $primary-color;
+		}
+		.active {
+			color: $font-color-lighter;
+		}
+	}
+}
+
+
+/******** 10.6 Buttons ********/
+button {
+	&:focus {
+		outline: none;
+	}
+}
+.btn.stripes-btn {
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent) !important;
+	background-size: .3rem .3rem !important;
+}
+.btn {
+	@include roundedCorners(2);
+	border: 1px solid transparent;
+	font-size: .825rem;
+	font-weight: 400;
+	padding: .594rem 1.25rem;
+	i {
+		font-size: .9rem;
+		margin: 0 3px 0 0;
+	}
+}
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+.btn-sm {
+	padding: .4rem .8rem;
+}
+.btn-lg {
+	padding: .8rem 1.5rem;
+}
+.btn-link {
+	color: $primary-color;
+}
+
+
+/******** 10.6.1 Button Light ********/
+.btn-light {
+	color: $grey;
+	background-color: $light-grey;
+	border-color: $light-grey;
+	&:hover {
+		color: $grey;
+		background-color: darken($light-grey, 3%);
+		border-color: darken($light-grey, 3%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $grey;
+		background-color: $light-grey;
+		border-color: $light-grey;
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(227, 231, 236, 0.1);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $grey;
+		background-color: $light-grey;
+		border-color: $light-grey;
+		box-shadow: 0 0 0 0.2rem rgba(227, 231, 236, 0.1);
+		&:focus {
+			color: $grey;
+			background-color: $light-grey;
+			border-color: $light-grey;
+			box-shadow: 0 0 0 0.2rem rgba(227, 231, 236, 0.1);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $grey;
+		background-color: $light-grey;
+		border-color: $light-grey;
+	}
+}
+/******** 10.6.2 Button Outline Light ********/
+.btn-outline-light {
+	color: $grey;
+	border-color: $light-grey;
+	&:hover {
+		color: $grey;
+		background-color: $light-grey;
+		border-color: $light-grey;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $grey;
+		background-color: $light-grey;
+		border-color: $light-grey;
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(227, 231, 236, 0.1);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $grey;
+		background-color: $light-grey;
+		border-color: $light-grey;
+		box-shadow: 0 0 0 0.2rem rgba(227, 231, 236, 0.1);
+		&:focus {
+			color: $grey;
+			background-color: $white;
+			border-color: $white;
+			box-shadow: 0 0 0 0.2rem rgba(227, 231, 236, 0.1);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $grey;
+		background-color: $light-grey;
+		border-color: $light-grey;
+	}
+}
+
+
+/******** 10.6.3 Button Dark ********/
+.btn-dark {
+	color: $white;
+	background-color: $dark-color;
+	border-color: $dark-color;
+	&:hover {
+		color: $white;
+		background-color: lighten($dark-color, 5%);
+		border-color: lighten($dark-color, 5%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: lighten($dark-color, 5%);
+		border-color: lighten($dark-color, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgb(211, 214, 218);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: lighten($dark-color, 5%);
+		border-color: lighten($dark-color, 5%);
+		box-shadow: 0 0 0 0.2rem rgb(211, 214, 218);
+		&:focus {
+			color: $white;
+			background-color: lighten($dark-color, 5%);
+			border-color: lighten($dark-color, 5%);
+			box-shadow: 0 0 0 0.2rem rgb(211, 214, 218);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: lighten($dark-color, 5%);
+		border-color: lighten($dark-color, 5%);
+	}
+}
+/******** 10.6.4 Button Outline Dark ********/
+.btn-outline-dark {
+	color: $dark-color;
+	border-color: $dark-color;
+	&:hover {
+		color: $white;
+		background-color: $dark-color;
+		border-color: $dark-color;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: lighten($dark-color, 5%);
+		border-color: lighten($dark-color, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgb(211, 214, 218);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: lighten($dark-color, 5%);
+		border-color: lighten($dark-color, 5%);
+		box-shadow: 0 0 0 0.2rem rgb(211, 214, 218);
+		&:focus {
+			color: $white;
+			background-color: lighten($dark-color, 5%);
+			border-color: lighten($dark-color, 5%);
+			box-shadow: 0 0 0 0.2rem rgb(211, 214, 218);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: lighten($dark-color, 5%);
+		border-color: lighten($dark-color, 5%);
+	}
+}
+
+
+/******** 10.6.5 Button Primary ********/
+.btn-primary {
+	color: $primary-text-color;
+	background-color: $primary-color;
+	border-color: $primary-color;
+	&:hover {
+		color: $primary-text-color;
+		background-color: darken($primary-color, 5%);
+		border-color: darken($primary-color, 5%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $primary-text-color;
+		background-color: darken($primary-color, 5%);
+		border-color: darken($primary-color, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgb(228, 240, 255);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $primary-text-color;
+		background-color: darken($primary-color, 5%);
+		border-color: darken($primary-color, 5%);
+		box-shadow: 0 0 0 0.2rem rgb(228, 240, 255);
+		&:focus {
+			color: $primary-text-color;
+			background-color: darken($primary-color, 5%);
+			border-color: darken($primary-color, 5%);
+			box-shadow: 0 0 0 0.2rem rgb(228, 240, 255);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $primary-text-color;
+		background-color: darken($primary-color, 5%);
+		border-color: darken($primary-color, 5%);
+	}
+}
+/******** 10.6.6 Button Outline Primary ********/
+.btn-outline-primary {
+	color: $primary-color;
+	border-color: $primary-color;
+	&:hover {
+		color: $white;
+		background-color: $primary-color;
+		border-color: $primary-color;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $primary-text-color;
+		background-color: darken($primary-color, 5%);
+		border-color: darken($primary-color, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgb(228, 240, 255);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $primary-text-color;
+		background-color: darken($primary-color, 5%);
+		border-color: darken($primary-color, 5%);
+		box-shadow: 0 0 0 0.2rem rgb(228, 240, 255);
+		&:focus {
+			color: $primary-text-color;
+			background-color: darken($primary-color, 5%);
+			border-color: darken($primary-color, 5%);
+			box-shadow: 0 0 0 0.2rem rgb(228, 240, 255);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $primary-text-color;
+		background-color: darken($primary-color, 5%);
+		border-color: darken($primary-color, 5%);
+	}
+}
+
+
+/******** 10.6.7 Button Secondary ********/
+.btn-secondary {
+	color: $secondary-text-color;
+	background-color: $secondary-color;
+	border-color: $secondary-color;
+	&:hover {
+		color: $secondary-text-color;
+		background-color: darken($secondary-color, 5%);
+		border-color: darken($secondary-color, 5%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(57, 72, 88, .25%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+		box-shadow: 0 0 0 0.2rem rgba(57, 72, 88, .25%);
+		&:focus {
+			color: $white;
+			background-color: $secondary-color;
+			border-color: $secondary-color;
+			box-shadow: 0 0 0 0.2rem rgba(57, 72, 88, .25%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $secondary-text-color;
+		background-color: darken($secondary-color, 5%);
+		border-color: darken($secondary-color, 5%);
+	}
+}
+/******** 10.6.8 Button Outline Secondary ********/
+.btn-outline-secondary {
+	color: $secondary-color;
+	border-color: $secondary-color;
+	&:hover {
+		color: $white;
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(57, 72, 88, .25%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+		box-shadow: 0 0 0 0.2rem rgba(57, 72, 88, .25%);
+		&:focus {
+			color: $white;
+			background-color: $secondary-color;
+			border-color: $secondary-color;
+			box-shadow: 0 0 0 0.2rem rgba(57, 72, 88, .25%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+	}
+}
+
+
+/******** 10.6.9 Button Info ********/
+.btn-info {
+	color: $white;
+	background-color: $blue;
+	border-color: $blue;
+	&:hover {
+		color: $white;
+		background-color: darken($blue, 5%);
+		border-color: darken($blue, 5%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($blue, 5%);
+		border-color: darken($blue, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(16, 103, 211, .35%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($blue, 5%);
+		border-color: darken($blue, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(16, 103, 211, .35%);
+		&:focus {
+			color: $white;
+			background-color: darken($blue, 5%);
+			border-color: darken($blue, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(16, 103, 211, .35%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: darken($blue, 5%);
+		border-color: darken($blue, 5%);
+	}
+}
+/******** 10.6.10 Button Outline Info ********/
+.btn-outline-info {
+	color: $blue;
+	border-color: $blue;
+	&:hover {
+		color: $white;
+		background-color: $blue;
+		border-color: $blue;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($blue, 5%);
+		border-color: darken($blue, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(16, 103, 211, .35%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($blue, 5%);
+		border-color: darken($blue, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(16, 103, 211, .35%);
+		&:focus {
+			color: $white;
+			background-color: darken($blue, 5%);
+			border-color: darken($blue, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(16, 103, 211, .35%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: darken($blue, 5%);
+		border-color: darken($blue, 5%);
+	}
+}
+
+
+/******** 10.6.11 Button Danger ********/
+.btn-danger {
+	color: $white;
+	background-color: $red;
+	border-color: $red;
+	&:hover {
+		color: $white;
+		background-color: darken($red, 5%);
+		border-color: darken($red, 5%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($red, 5%);
+		border-color: darken($red, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(237, 59, 39, .25%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($red, 5%);
+		border-color: darken($red, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(237, 59, 39, .25%);
+		&:focus {
+			color: $white;
+			background-color: darken($red, 5%);
+			border-color: darken($red, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(237, 59, 39, .25%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: darken($red, 5%);
+		border-color: darken($red, 5%);
+	}
+}
+/******** 10.6.12 Button Outline Danger ********/
+.btn-outline-danger {
+	color: $red;
+	border-color: $red;
+	&:hover {
+		color: $white;
+		background-color: $red;
+		border-color: $red;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($red, 5%);
+		border-color: darken($red, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(237, 59, 39, .25%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($red, 5%);
+		border-color: darken($red, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(237, 59, 39, .25%);
+		&:focus {
+			color: $white;
+			background-color: darken($red, 5%);
+			border-color: darken($red, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(237, 59, 39, .25%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: darken($red, 5%);
+		border-color: darken($red, 5%);
+	}
+}
+
+
+/******** 10.6.13 Button Warning ********/
+.btn-warning {
+	color: $white;
+	background-color: $yellow;
+	border-color: $yellow;
+	&:hover {
+		color: $white;
+		background-color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(239, 180, 13, .35%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(239, 180, 13, .35%);
+		&:focus {
+			color: $white;
+			background-color: darken($yellow, 5%);
+			border-color: darken($yellow, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(239, 180, 13, .35%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+	}
+}
+/******** 10.6.14 Button Outline Warning ********/
+.btn-outline-warning {
+	color: $yellow;
+	border-color: $yellow;
+	&:hover {
+		color: $white;
+		background-color: $yellow;
+		border-color: $yellow;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(239, 180, 13, .35%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(239, 180, 13, .35%);
+		&:focus {
+			color: $white;
+			background-color: darken($yellow, 5%);
+			border-color: darken($yellow, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(239, 180, 13, .35%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $black;
+		background-color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+	}
+}
+
+
+/******** 10.6.15 Button Success ********/
+.btn-success {
+	color: $white;
+	background-color: $green;
+	border-color: $green;
+	&:hover {
+		color: $white;
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(81, 149, 21, .30%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(81, 149, 21, .30%);
+		&:focus {
+			color: $white;
+			background-color: darken($green, 5%);
+			border-color: darken($green, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(81, 149, 21, .30%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+	}
+}
+/******** 10.6.16 Button Outline Success ********/
+.btn-outline-success {
+	color: $green;
+	border-color: $green;
+	&:hover {
+		color: $white;
+		background-color: $green;
+		border-color: $green;
+	}
+	.btn-check:focus + &,
+	&:focus {
+		color: $white;
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(81, 149, 21, .30%);
+	}
+	&.dropdown-toggle.show,
+	.btn-check:checked + &,
+	.btn-check:active + &,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+		box-shadow: 0 0 0 0.2rem rgba(81, 149, 21, .30%);
+		&:focus {
+			color: $white;
+			background-color: darken($green, 5%);
+			border-color: darken($green, 5%);
+			box-shadow: 0 0 0 0.2rem rgba(81, 149, 21, .30%);
+		}
+	}
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		pointer-events: none;
+		color: $white;
+		background-color: darken($green, 5%);
+		border-color: darken($green, 5%);
+	}
+}
+
+
+/******** 10.7 Forms ********/
+::-webkit-input-placeholder {
+  color: #9ba6b5;
+}
+:-moz-placeholder {
+  color: #9ba6b5;
+}
+::-moz-placeholder {
+  color: #9ba6b5;
+}
+:-ms-input-placeholder {
+  color: #9ba6b5;
+}
+
+
+/******** 10.7.1 Controls ********/
+.form-control {
+	border: 1px solid $form-border;
+	@include roundedCorners(2);
+	color: $input-color;
+	font-size: .725rem;
+	min-height: 40px;
+	&:hover {
+		border: 1px solid $primary-color;
+	}
+	&:focus {
+		border-color: $primary-color;
+		box-shadow: none;
+		@include roundedCorners(2);
+		outline: auto !important;
+		outline-color: $primary-color !important;
+	}
+	&:disabled, &[readonly] {
+		background: $form-label-bg;
+		cursor: not-allowed;
+	}
+}
+.col-form-label {
+	padding-top: calc(.595rem + 1px);
+	padding-bottom: calc(.595rem + 1px);
+	min-height: 40px;
+}
+.form-select:disabled {
+	background-color: $form-label-bg;
+	cursor: not-allowed;
+}
+.input-group-text {
+	border: 1px solid $form-border;
+	background: $form-label-bg;
+	@include roundedCorners(2);
+	font-size: .75rem;	
+	min-height: 40px;
+	margin: 0;
+	i {
+		color: $input-color-dark;
+	}
+}
+.form-text {
+	color: $font-color-lighter;
+}
+label {
+	margin-bottom: .3rem;
+	font-size: .8rem;
+	font-weight: 600;
+}
+
+/******** 10.7.2 Validations ********/
+.form-control.is-valid, .was-validated .form-control:valid {
+	border-color: $valid-color;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+	border-color: $invalid-color;
+}
+.valid-feedback {
+	@include roundedCorners(2);
+	font-size: .7rem;
+	color: $valid-color;
+}
+.invalid-feedback {
+	@include roundedCorners(2);
+	font-size: .7rem;
+	color: $invalid-color;
+}
+.valid-tooltip {
+	right: 0;
+	@include roundedCorners(2);
+	font-size: .7rem;
+	background: $valid-color;
+}
+.invalid-tooltip {
+	right: 0;
+	@include roundedCorners(2);
+	font-size: .7rem;
+	background: $invalid-color;
+}
+
+
+/******** 10.7.3 File Upload ********/
+.form-control::-webkit-file-upload-button {
+	background: $form-label-bg;
+	font-size: .75rem;	
+	min-height: 40px;
+	margin: -1rem 1rem -1rem -.75rem;
+	color: $font-color;
+	line-height: 40px;
+}
+
+
+/******** 10.7.4 Checkbox and Radio ********/
+.form-check {
+	margin: 0 1rem 0 0;
+	.form-check-label {
+		font-weight: 400;
+		font-size: .75rem;
+		margin: 0 0 0 5px;
+	}
+}
+.form-check .form-check-input[type=checkbox] {
+	@include roundedCorners(2);
+	width: 1rem !important;
+	height: 1rem !important;
+	margin-top: .15em;
+	min-height: auto;
+	padding: 0;
+}
+.form-check .form-check-input[type=radio] {
+	@include roundedCorners(50);
+	width: 1rem !important;
+	height: 1rem !important;
+	margin-top: .15em;
+	min-height: auto;
+	padding: 0;
+}
+
+
+/******** 10.8 List Group ********/
+.list-group {
+	margin-bottom: 2rem;
+	background: $white;
+	border: 0;
+	@include roundedCorners(2);
+	margin-bottom: 1rem;
+	.list-group-item {
+		font-size: .725rem;
+		padding: .7rem .75rem;
+		border: 1px solid $border-bg;
+		color: $font-color;
+		&:first-child {
+			@include roundedCornersAll(2px, 2px, 0, 0);
+		}
+		&:last-child {
+			@include roundedCornersAll(0, 0, 2px, 2px);
+		}
+		&.active {
+			color: $white;
+    		background-color: $primary-color;
+    		border-color: $primary-color;
+		}
+		&.disabled {
+			color: $font-color-lighter;
+		}
+	}
+}
+.list-group-item + .list-group-item {
+	border-top-width: 0 !important;
+}
+
+
+/******** 10.9 Modal ********/
+.modal {
+	text-align: left;	
+	.modal-content {
+		@include roundedCorners(3);
+		border: 0;
+	}
+	.modal-header {
+		background: $primary-color;
+		color: $white;
+		border: 0;
+		@include roundedCornersAll(3px, 3px, 0, 0);
+	}
+	.modal-body {
+		padding: 1.2rem;
+		max-height: calc(100vh - 180px);
+	}
+	.modal-footer {
+		border-top: 1px solid $border-bg;
+		padding: .2rem .75rem;
+	}
+}
+.modal-backdrop {
+	&.show {
+		opacity: 0.7;
+	}
+}
+.btn-close {
+	color: $white;
+	text-shadow: 0 1px 0 $black;
+	background: url(../img/cancel.svg) center/1em auto no-repeat;
+	margin-right: 0 !important;
+	&:hover {
+		color: $white;
+	}
+}
+
+
+/******** 10.10 Dropdown Menu ********/
+.dropdown-menu {
+	border: 0;
+	@include roundedCornersAll(0, 0, 4px, 4px);
+	box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.2);
+	width: 11rem;
+	font-size: .75rem;
+	&:before {
+		position: absolute;
+		top: -9px;
+		left: 12px;
+		content: '';
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-bottom: 9px solid $white;
+	}
+	&.dropdown-menu-end {
+		right: 0;
+		&:before {
+			right: 15px;
+			left: auto;
+			top: -9px;
+		}
+	}
+	&.sm {
+		width: 10rem;
+		min-width: auto;
+	}
+	&.md {
+		width: 16rem;
+	}
+	&.lrg {
+		width: 18rem;
+	}
+	.dropdown-item {
+		padding: .5rem 1rem .5rem 1rem;
+		font-size: .8rem;
+		line-height: 100%;
+		position: relative;
+		color: $font-color;
+		&:hover {
+			background: $primary-color;
+			color: $white;
+		}
+		&:first-child {
+			@include roundedCorners(0);
+		}
+		&:last-child {
+			@include roundedCorners(0);
+		}
+		&.active-page {
+			color: $primary-text-color;
+			background: $primary-color;
+			pointer-events: none;
+			cursor: not-allowed;
+		}
+	}
+	.dropdown-divider {
+		border-top: 1px solid $border-bg-dark;
+	}
+	.dropdown-menu-header {
+		padding: .7rem 1rem;
+		margin-bottom: .5rem;
+		background: $light-bg;
+		font-size: .85rem;
+		font-weight: 700;
+	}
+}
+.dropdown-toggle {
+	&::after {
+		vertical-align: middle;
+	}
+	&.sub-nav-link {
+		&::after {
+			float: right;
+			margin: .15rem 0 0 0;
+			border-right: 0;
+			border-left: 5px solid;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;	
+		}
+	}
+}
+.dropdown-divider {
+	margin: .3rem 0;
+}
+
+
+/******** 10.11 Nav Tabs ********/
+.custom-tabs-container {
+	.nav-tabs {
+		margin: 0 -20px;
+		border-bottom: 1px solid $border-bg;
+		.nav-link {
+			padding: .6rem 1rem;
+			@include roundedCorners(0);
+			color: $font-color-light;
+			&.active {
+				border-color: transparent $border-bg $white;
+				box-shadow: 0 -3px 0 0 $primary-color;
+				color: $font-color;
+			}
+		}
+		.nav-item:first-child {
+			margin-left: 20px;
+		}
+	}
+	.tab-content {
+		padding: 1.5rem 0 0 0;
+	}
+}
+
+
+/******** 10.12 Tooltips ********/
+.tooltip {
+	font-size: .7rem;
+}
+.tooltip-inner {
+	@include roundedCorners(0);
+}
+
+
+/******** 10.13 Popovers ********/
+.popover {
+	border: 1px solid $border-bg;
+}
+.popover-body {
+	color: $font-color-light;
+	font-size: .775rem;
+}
+.popover-header {
+	background: $light-bg;
+	font-size: .9rem;
+	padding: .7rem 1rem;
+	border-bottom: 1px solid $border-bg;
+}
+
+
+/******** 10.14 Tables ********/
+.table {
+	color: $table-color-light;
+	font-size: .725rem;
+	border-color: $table-border;
+	th, td {
+		white-space: nowrap;
+	}
+	th {
+		font-size: .725rem;
+		font-weight: 600;
+		color: $table-color;
+		border-bottom: 1px solid $table-border-dark !important;
+	}
+	.td-actions {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: row;
+		a.icon {
+			margin: 0 3px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 20px;
+			height: 20px;
+			@include roundedCorners(30);
+			color: $white;
+			i {
+				font-size: .7rem;
+				text-shadow: none;
+			}
+			&.red {
+				background: $red;
+			}
+			&.green {
+				background: $green;
+			}
+			&.blue {
+				background: $blue;
+			}
+		}
+	}
+	a.link {
+		color: $primary-color;
+		font-weight: 600;
+		text-decoration: underline; 
+	}
+	.flag-img {
+		width: 18px;
+		height: 18px;
+		margin: 0 10px 0 0;
+	}
+	&.v-middle {
+		vertical-align: middle;
+	}
+}
+.table-hover > tbody > tr:hover {
+	background-color: $light-color;
+	--bs-table-accent-bg: $light-color;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: $light-color;
+	--bs-table-accent-bg: $light-color;
+}
+.table-actions {
+	display: flex;
+	flex-direction: row;
+	.btn { 
+		margin: 0 3px;
+		i {
+			margin: 0;
+		}
+	}
+}
+.table-container {
+	padding: 1.25rem 1.25rem;
+	@include roundedCorners(4);
+	margin-bottom: 20px;
+	&.light-green {
+		background: $white;
+		.table {
+			th {
+				color: $green;
+			}
+			td {
+				border-bottom: 1px solid darken($light-green, 2%);
+			}
+			a {
+				color: $green;
+			}
+		}
+	}
+	&.light-blue {
+		background: $white;
+		.table {
+			th {
+				color: $blue;
+			}
+			td {
+				border-bottom: 1px solid darken($light-blue, 2%);
+			}
+			a {
+				color: $blue;
+			}
+		}
+	}
+}
+
+
+/******** 10.15 Pagination ********/
+.pagination {
+	.page-item {
+		&:first-child .page-link {
+			border-top-left-radius: 2px;
+			border-bottom-left-radius: 2px;
+		}
+		&:last-child .page-link {
+			border-top-right-radius: 2px;
+			border-bottom-right-radius: 2px;
+		}
+		&.active {
+			.page-link {
+				background: $primary-color;
+				border: 1px solid $primary-color;
+				color: $white;
+				&:hover {
+					background: $primary-color;
+				}
+			}
+		}
+	}
+	.page-link {
+		color: $primary-color;
+		border: 1px solid $border-bg;
+		&:hover {
+			background: $light-bg;
+		}
+	}
+}
+
+
+/******** 10.16 Progress ********/
+.progress {
+	background: $light-bg;
+	@include roundedCorners(2);
+	font-size: .625rem;
+}
+.progress-bar {
+	background-color: $primary-color;
+}
+.progress-bar-striped {
+	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent) !important;
+	background-size: .5rem .5rem !important;
+}
+
+
+/******** 10.17 Row Gutters ********/
+.gutters {
+	margin-right: -10px;
+	margin-left: -10px;
+}
+.gutters > .col,
+.gutters > [class*="col-"] {
+	padding-right: 10px;
+	padding-left: 10px;
+}

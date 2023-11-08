@@ -1,0 +1,161 @@
+// White Shades
+$white: #ffffff;
+$pearl-bg: #e3e7f2;
+$light-grey: #e3e7ec;
+$grey: #53565a;
+
+// Black Shades
+$black: #000000;
+
+// Font Colors
+$main-font-color: #454f58;
+$font-color: #111111;
+$font-color-light: #5e6973;
+$font-color-dark: #373e46;
+$font-color-lighter: #9aa5af;
+
+// Light, Dark Colors
+$light-bg: #f2f4f9;
+$light-color: #f5f8fd;
+$lighter-bg: #f6f6fd;
+$dark-bg: #a6b2c5;
+$dark-color: #212c3a;
+
+$content-wrapper-bg: #efeff7;
+
+// Border Colors
+$border-bg: #e1e8f3;
+$border-bg-dark: #eaeef7;
+$border-bg-light: #e2e2f1;
+
+// Forms
+$form-border: #dbdaea;
+$input-color: #8a96a0;
+$input-color-dark: #6c7882;
+$form-label-bg: #f8f8fb;
+$valid-color: rgba(25,135,84,.9);
+$invalid-color: rgba(220,53,69,.9);
+
+// Primary, Secondary Colors
+$primary-color: #1273eb;
+$primary-color-light: #e5f0ff;
+$primary-color-dark: #0d40a9;
+$primary-text-color: #ffffff;
+$secondary-color: #394758;
+$secondary-color-light: #95a3b5;
+$secondary-text-color: #ffffff;
+
+// Sidebar Color
+$sidebar-bg: #ffffff;
+$sidebar-hover-bg: #f1f4f9;
+$sidebar-active-bg: #e5f0ff;
+$sidebar-text-color: #5e6973;
+$sidebar-icon-bg: #e7ecf3;
+
+// Tab Content Color
+$tab-content-bg: #f6f6fd;
+
+// Shadow
+$card-shadow: #eaeef7;
+
+// Navbar Color
+$nav-tooltip-bg: #000000;
+$nav-tooltip-text: #ffffff;
+
+// Table Colors
+$table-header: #1273eb;
+$table-td: #ffffff;
+$table-td-hover: #f5f6fa;
+$table-color: #072242;
+$table-color-light: #6f7479;
+$table-border: #e8edf3;
+$table-border-dark: #c8d3df;
+
+// Colors
+$red: #ec4f3d;
+$light-red: #ffdbdb;
+$dark-red: #de3e3e;
+$green: #5dab18;
+$light-green: #d8eccb;
+$dark-green: #4c900f;
+$peacock-green: #83d050;
+$yellow: #e4b42b;
+$light-yellow: #f7e6b5;
+$dark-yellow: #cc9a09;
+$blue: #1273eb;
+$light-blue: #d5eafd;
+$dark-blue: #2d8dec;
+$pink: #e75b62;
+$light-pink: #ffe2e7;
+$dark-pink: #e24f69;
+$peach: #e75b62;
+$maroon: #8f4a6e;
+$orange: #f36311;
+$light-orange: #fde8d9;
+$dark-orange: #e6680e;
+$violet: #62199a;
+$light-violet: #f2e2ff;
+$dark-violet: #8936ca;
+$purple: #c22dfe;
+$brown: #b36135;
+$light-brown: #e8dad7;
+$dark-brown: #a7644a;
+
+
+
+/*************** 2.Mixins ***************/
+
+// Transition
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+// Box Sizing
+@mixin box-sizing($string){
+	-webkit-box-sizing: $string;
+	-moz-box-sizing: $string;
+	box-sizing: $string;
+}
+
+// Box Shadow
+@mixin box-shadow($off-y, $off-x, $blur, $color){
+	-moz-box-shadow: $off-y $off-x $blur $color; /* FF3.5+ */
+	-webkit-box-shadow: $off-y $off-x $blur $color; /* Saf3.0+, Chrome */
+	box-shadow: $off-y $off-x $blur $color; /* Opera 10.5, IE9 */
+}
+@mixin box-shadow-inset($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow: $top $left $blur $color $inset;
+	-moz-box-shadow: $top $left $blur $color $inset;
+	box-shadow: $top $left $blur $color $inset;
+}
+
+// Border Radius
+@mixin roundedCorners($size) {
+	-webkit-border-radius: $size + px;
+	-moz-border-radius: $size + px;
+	border-radius: $size + px;
+}
+@mixin roundedCornersAll($size1, $size2, $size3, $size4) {
+	-webkit-border-radius: $size1 $size2 $size3 $size4;
+	-moz-border-radius: $size1 $size2 $size3 $size4;
+	border-radius: $size1 $size2 $size3 $size4;
+}
+
+// Transform
+@mixin transform($args){
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-o-transform: $args;
+	-ms-transform: $args;
+	transform: $args;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+	opacity: $opacity / 100;
+	filter: alpha(opacity=$opacity);
+}
