@@ -35,7 +35,7 @@
                             </a>
                             <h6>Welcome to UniPro dashboard,<br>Create your account.</h6>
                             <div class="field-wrapper">
-                                <input type="email" name="email" required autofocus>
+                                <input type="email" name="email" value="{{ old('email') }}" required autofocus>
                                 <div class="field-placeholder">Email ID</div>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
